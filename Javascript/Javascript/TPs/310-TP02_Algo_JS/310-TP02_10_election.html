@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<!--
+*********************************************************************
+  Nom du programme  :  310-Exo_P1_10_election.html
+  Auteur            :  Bonneau Didier 
+  Mise a jour       :  septembre 2019
+  Fonction          :  Afficher les résultats de l'élection
+*********************************************************************
+-->
+<html>
+    <head>
+        <title>Résultats de l'élection</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+
+        <script>
+
+            // Déclaration des variables 
+            var scoreA, scoreB, scoreC, scoreD;
+            var crit1, crit2, crit3, crit4;
+            var resultat;
+            // Déclaration des constantes
+            const ELU = 50;
+            const DEUX_TOUR = 12.5;
+
+            // Saisie des scores
+            scoreA = parseFloat(prompt("le score du candidat A : "));
+            scoreB = parseFloat(prompt("le score du candidat B : "));
+            scoreC = parseFloat(prompt("le score du candidat C : "));
+            scoreD = parseFloat(prompt("le score du candidat D : "));
+
+            // Traitement du calcul
+            crit1 = scoreA > ELU;
+            crit2 = (scoreB > ELU) || (scoreC > ELU) || (scoreD > ELU);
+            crit3 = (scoreA >= scoreB) && (scoreA >= scoreC) && (scoreA > scoreD);
+            crit4 = (scoreA >= DEUX_TOUR);
+
+/*            if (crit1) {
+                resultat = "élu au premier tour";
+            } else if (crit2 || !crit4) {
+                resultat = "Battu, éliminé, sorti !!!";
+            } else if (crit3) {
+                resultat = "en ballotage favorable";
+            } else {
+                resultat = "en ballotage défavorable";
+            }
+*/
+            if (crit1) {
+                resultat = "élu au premier tour";
+            } else {
+                if (crit2 || !crit4) {
+                    resultat = "Battu, éliminé, sorti !!!";
+                } else {
+                    if (crit3) {
+                        resultat = "en ballotage favorable";
+                    } else {
+                        resultat = "en ballotage défavorable";
+                    }
+                }
+            }
+
+            // Affichage du résultat
+            alert("Le candidat 1 est " + resultat);
+
+        </script>
+
+
+    </body>
+</html>

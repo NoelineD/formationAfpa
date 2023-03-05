@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!--
+*********************************************************************
+  Nom du programme  :  310-Exo_P1_02_prix_ttc.html
+  Auteur            :  Bonneau Didier 
+  Mise a jour       :  septembre 2019
+  Fonction          :  Calcul du prix TTC
+*********************************************************************
+-->
+<html>
+    <head>
+        <title>Calcul du prix TTC</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        
+    	<script>
+    	
+    		var prixHT, prixTTC, tauxTVA, nbrArt;
+
+    		//saisie
+    		prixHT = prompt('Entre le prix hors taxe : ');
+    		nbrArt = prompt('Entre le nombre d\'article : ');
+    		tauxTVA = prompt('Entre le taux de tva (en pourcentage) : ');
+
+    		// traitement
+    		prixTTC = (prixHT * (1 + tauxTVA/100)) * nbrArt;
+
+                //affichage
+                alert(`le prix TTC est : ${prixTTC} €`);
+
+    	</script>
+
+
+    </body>
+</html>

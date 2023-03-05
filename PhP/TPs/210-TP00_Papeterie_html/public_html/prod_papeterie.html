@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<!--
+ * @author Didier Bonneau
+ * @copyright (c) Afpa, DWWM
+ * @version 1.0 du 01/04/2019
+ * Fichier d'affichage des produits Papeterie de l'application TP_Papeterie
+-->
+<html>
+    <head>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+        <title>
+            210_00_TP_Papeterie DWWM
+        </title>
+        <!-- Bootstrap core CSS -->
+        <link href="dist/css/bootstrap.css" rel="stylesheet">
+        <link href="css/papeterie.css" type="text/css" rel="stylesheet" />
+        <style>
+            input[type=number] {
+                width: 45px;
+            }
+        </style>
+        <script src="dist/js/jquery-3.4.1.js"></script>
+        <script src="dist/js/bootstrap.js"></script>
+    </head>
+    
+    <body>
+        <div class='wrap'>
+            <header class="container-fluid bg-dark text-white">
+                <div class="row">
+                    <div class="col-1">
+                        <img src="images/logo_papeterie.png" alt="logo">
+                    </div>
+                    <div class="col-8">
+                        <h3>Papeterie du Centre</h3>
+                        <p>9 rue Marc Seguin<br>
+                            94000 Créteil<br>
+                            Tél : 01 23 45 67 89</p>
+                    </div>
+                    <div class="col-3">
+                        <span>Déjà client : <a href="#"><button class="btn btn-primary btn-sm">Identifiez-vous</button></a></span>
+                        <br>
+                        <span><a href="#"><button class="btn btn-secondary btn-sm">Créer un compte</button></a></span>
+                        <br>
+                        <span class="badge badge-secondary">DATE : 01-03-2013</span>
+                    </div>
+                </div>
+            </header>
+
+            <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+                <a class="navbar-brand" href="index.html">Accueil</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                    <ul class="navbar-nav">
+                        <!-- Dropdown -->
+                        <li class="nav-item dropdown active">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">Les Produits</a>
+                            <div class="dropdown-menu bg-secondary">
+                                <a class="dropdown-item disabled" href="#">Papeterie</a>
+                                <a class="dropdown-item" href="prod_ecriture.html">Ecriture</a>
+                                <a class="dropdown-item" href="#">Accessoirs</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Les Bonnes affaires</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled" href="#">Votre panier</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <main class="container">
+                <h2>Liste des produits de la catégorie papeterie</h2>
+                <table class="table table-bordered">
+                    <tbody id="ligne">
+                        <tr>
+                            <th class="text-center w-10">REFERENCE</th>
+                            <th class="w-60">DESCRIPTION</th>
+                            <th class="text-center w-10">PRIX<br>UNITAIRE</th>
+                            <th class="text-center w-10">QUANTITE</th>
+                            <th class="text-center w-10">AJOUTER<br>AU PANIER</th>
+                        </tr>
+                        <tr>
+                            <td class="text-center">0019</td>
+                            <td>Classeur à anneaux</td>
+                            <td class="prix text-center">3.50</td>
+                            <td class="text-center"><input type="number" value="0" min="0" /></td>
+                            <td class="text-center"></td>
+                        </tr>
+                        <tr>
+                            <td class="text-center">0010</td>
+                            <td>Sous chemises</td>
+                            <td class="prix text-center">1.45</td>
+                            <td class="text-center"><input type="number" value="0" min="0" /></td>
+                            <td class="text-center"></td>
+                        </tr>
+                        <tr>
+                            <td class="text-center">0003</td>
+                            <td>Couvertures transparentes pour dossiers</td>
+                            <td class="prix text-center">4.50</td>
+                            <td class="text-center"><input type="number" value="0" min="0" /></td>
+                            <td class="text-center"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </main>
+        </div>
+        <footer>
+            <div class="bg-dark text-white">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 col-md-8 col-sm-6 col-ms-12 pull-left">
+                            <h6 class="copyright text-white">Copyright &copy;Section DWWM Afpa Créteil 2019 / Tous droits réservés. </h6>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-6 col-ms-12 pull-right">
+                            <div class="foot_menu">
+                                <ul>
+                                    <li class=""> <a href="/contact/" class="" target="_self">Contact</a> </li>
+                                    <li class=""> <a href="/mentions-legales.html" class="" target="_self">Mentions légales</a> </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

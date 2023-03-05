@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<!--
+*********************************************************************
+  Nom du programme  :  310-Exo_P1_03_positf_negatif.html
+  Auteur            :  Bonneau Didier 
+  Mise a jour       :  septembre 2019
+  Fonction          :  Dire si un nombre est positif ou négatif (pas de zéro)
+*********************************************************************
+-->
+<html>
+    <head>
+        <title>Dire si un nombre est positif ou négatif</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        
+    	<script>
+    	
+            var nbr, resultat;
+
+            //saisie
+            nbr = parseInt( prompt('Entre le nombre : ') );
+
+            // traitement / affichage
+            if (nbr >= 0) {
+                    resultat = 'positif';
+            } else {
+                    resultat = 'négatif';
+            }
+            
+            alert("ce nombre est " + resultat);
+            
+    	</script>
+
+
+    </body>
+</html>

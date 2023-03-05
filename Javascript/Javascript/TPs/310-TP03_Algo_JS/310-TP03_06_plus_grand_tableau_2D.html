@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!--
+*********************************************************************
+  Nom du programme  :  310-Exo_P2_06_plus_grand_tableau_2D.html
+  Auteur            :  Bonneau Didier 
+  Mise a jour       :  septembre 2019
+  Fonction          :  Recherche du plus grand dans un tableau à 2 dimensions
+*********************************************************************
+-->
+<html>
+    <head>
+        <title>Recherche plus grand tableau à 2 dimensions</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        
+    	<script type="text/javascript">
+    	
+            const LIGNE = 5;
+            const COLONNE = 5;
+            let tab = [[14,5,78,6,3],[130,58,718,66,13],[114,56,178,62,33],[17,1,78,16,27],[54,15,68,61,23]];
+            let lig, col, ligMax, colMax;
+
+            // traitement
+            ligMax = 0;
+            colMax = 0;
+            for (lig = 0; lig < LIGNE; lig++) {
+
+                for (col = 0; col < COLONNE; col++) {
+
+                    if (tab[lig][col] > tab[ligMax][colMax]){
+                        ligMax = lig;
+                        colMax = col;
+                    }
+
+                }
+
+            }
+
+            //affichage du tableau
+            for (lig in tab) {
+                for (col in tab[lig]) {
+                    document.write('<h1>valeur [' + lig + ' , ' + col + '] : '+ tab[lig][col] + '</h1>');
+                }
+                document.write('<br>');
+            }
+            document.write('<br><h1>La plus grande valeur est [' + ligMax + ' , ' + colMax + '] : '+ tab[ligMax][colMax] + '</h1>');
+        </script>
+
+    </body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!--
+322-TP04_JS_Dom_Style_04 : utilisation de event comme paramètre de la fonction unique preuve
+modification du style et d'attribut en JS
+Didier Bonneau DWWM Afpa Créteil maj 29-07-2020
+-->
+<html>
+    <head>
+        <title>Illusion d'optique</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="322-TP04_JS_Dom_Style_V01_V02_V03_V04.css" rel="stylesheet" type="text/css"/>
+        <script src="322-TP04_JS_Dom_Style_V04.js"></script>
+    </head>
+    <body>
+        <div id="idDivContenu"> 
+            <div id="idDivConsigne">
+                <h1> Exemple JavaScript: Illusion d'optique</h1>
+                <p>Cet exemple se base sur l'article de Edward Adelson à propos des 
+                    illusions d'optique. L'utilisation de JavaScript permet de mieux démontrer 
+                    l'illusion.</p>
+                <p>Sur l'image ci-dessous, l'article prétend que les carrés 
+                    marqués A et B ont la même couleur, ce qui parait faux de manière 
+                    évidente. Cependant si on maintient la souris pressée sur 
+                    l'image, cela fait apparaitre deux bandes grises et en comparant les couleurs 
+                    des bandes avec celles des carrés A et B, il devient évident 
+                    que le couleur est la même!</p>
+            </div>    
+            <div id="idDivImage">
+                <!-- l'utilisation de event comme paramètre permet de passer l'objet Event à la fonction appelée -->
+                <img id="idImage" src="images/shadow-illusion.jpg" alt="une image d'illusion" onmousedown="preuve(event)" onmouseup="preuve(event)">
+            </div>  
+            <div id="idDivPreuve"> 
+                <h2>Explication de l'illusion d'optique...</h2>
+                <p>L'illusion vient de ce que le cerveau discerne l'ombre venant du cylindre 
+                    et corrige la couleur du carré B en soustrayant l'assombrissement 
+                    dû à cette ombre.</p>
+                <cite>Basé sur un article 
+                    de Edward H. Adelson au M.I.T.</cite>
+            </div>
+        </div>
+    </body>
+</html>

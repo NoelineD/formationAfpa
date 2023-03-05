@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<!--
+*********************************************************************
+  Nom du programme  :  310-Exo_P2_01b_moyenne.html
+  Auteur            :  Bonneau Didier 
+  Mise a jour       :  septembre 2019
+  Fonction          :  saisie de 10 notes dans un tableau
+*********************************************************************
+-->
+<html>
+    <head>
+        <title>saisie de 10 notes et calcul moyenne</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        
+    	<script>
+    	
+            const MAX_NOTE = 5;
+        
+            let tabNotes = [], moyenne;
+            let idx;
+
+            //saisie des notes
+            for (idx = 0; idx < MAX_NOTE; idx++) {
+                // attention la fonction prompt renvoie une chaine de caractère
+                // pour le calcul de la moyenne, il npos faut des valeurs numériques
+                // utilisation de la fonction parseInt()
+                tabNotes[idx] = parseInt(prompt('Entrer la note ' + (idx + 1)));
+            }
+            //traitement
+            moyenne = 0;
+            for (idx in tabNotes) {
+            //for (idx = 0; idx < MAX_NOTE; idx++) {
+                moyenne = moyenne + tabNotes[idx];
+                //document.write(moyenne);
+            }
+
+            //moyenne = moyenne / MAX_NOTE;
+            moyenne /= tabNotes.length;
+            
+            //affichage du tableau et de la moyenne
+            for (idx in tabNotes) {     // attention la clé idx est de type chaine
+                //alert(typeof(idx));
+                numNote = parseInt(idx) + 1;
+                document.write('<h1>valeur de la note ' + numNote + ' : ' + tabNotes[idx] + '</h1>');
+            }
+            document.write('<h1>La moyenne des notes est : ' + moyenne + '</h1>');
+
+    	</script>
+
+    </body>
+</html>

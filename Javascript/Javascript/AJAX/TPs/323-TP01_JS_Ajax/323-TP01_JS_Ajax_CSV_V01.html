@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!--
+323-TP01_JS_Ajax_CSV_V01.html : lecture par ajax d'un fichier CSV sans test de la réponse
+Didier Bonneau DWWM Afpa Créteil maj 29-07-2020
+-->
+<html>
+    <head>
+        <title>323-TP01_JS_Ajax_CSV_V01</title>
+        <link rel="stylesheet" href="323-TP01_JS_Ajax.css" />
+        <script src="323-TP01_JS_Ajax_CSV_V01.js"></script>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+   <h1>TP Ajax</h1>
+    <h3>323-TP01_JS-Ajax_CSV_V01 : Requête synchrone sur un fichier texte csv</h3>
+    <h3>Pas de contrôle de l'état ni de la validité de la réponse</h3>
+    <div id="contenu">
+        <h2>liste des expositions</h2>
+        <table>
+            <thead>
+            <tr>
+                <th>Nom du club</th>
+                <th>Theme</th>
+                <th>Date</th>
+            </tr>
+            </thead>
+            <tbody id="result"></tbody>
+            <tfoot></tfoot>
+        </table>
+    </div>
+    <br/>
+    <button onclick="requete();" >Envoyer la requête</button>
+    </body>
+</html>

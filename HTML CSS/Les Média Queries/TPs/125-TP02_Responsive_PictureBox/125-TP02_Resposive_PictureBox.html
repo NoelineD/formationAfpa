@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<!--
+TP 125-TP02_Responsive_PictureBox
+Création d'une page type : affichage de photos
+Didier Bonneau DWWM Afpa Créteil maj 31-08-2020
+-->
+<html>
+    <head lang="fr">
+        <title>125-TP02_Resposive_PictureBox</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="125-TP02_Responsive_PictureBox.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <div id="wrapper" > <!-- enveloppe principale -->
+            <header>
+                <h1 class="center"><span class="entoure">Histoire du graphisme</span></h1>
+            </header>
+            <!-- Navigation albums -->
+            <nav class="catalogue">
+                <ul>
+                    <li class="active">Le Psychédélisme</li>
+                    <li>Le Futurisme</li>
+                    <li>l'Art déco</li>
+                    <li>Le Constructivisme</li>
+                    <li>Le Punk</li>
+                    <li>AEG</li>
+                </ul>
+            </nav>
+            <section class="galerie" id="idGalerie"> <!-- miniatures -->
+                    <a href="">
+                        <img src="albums/psyche/miniatures/mousekelley-01.jpg" alt="mousekelley-01" title="Le Psychédélisme" />
+                    </a>
+                    <a href="">
+                        <img src="albums/psyche/miniatures/mousekelley-02.jpg" alt="mousekelley-02" title="Le Psychédélisme" />
+                    </a>
+                    <a href="">
+                        <img src="albums/psyche/miniatures/mousekelley-03.jpg" alt="mousekelley-03" title="Le Psychédélisme" />
+                    </a>
+                    <a href="">
+                        <img src="albums/psyche/miniatures/mousekelley-04.jpg" alt="mousekelley-04" title="Le Psychédélisme" />
+                    </a>
+                    <a href="">
+                        <img src="albums/psyche/miniatures/mousekelley-05.jpg" alt="mousekelley-05" title="Le Psychédélisme" />
+                    </a>
+            </section>
+            <main> <!-- grande image et reflet -->
+                <h2 id="titreGrandeImage" class="center">Le Psychédélisme</h2>
+                <img class="grande-image" id="grandeImage" src="albums/psyche/images/mousekelley-01.jpg" alt="Mouse and Stanley Mouse, is an American artist, notable for his 1960s
+                     psychedelic rock concert poster designs" title="mousekelley-01" />
+                <!-- textes en surimpression sur le reflet -->
+                <div id="textesImage">
+                    <p id ="texteGrandeImage" class="center">mousekelley-01</p>
+                </div>            
+            </main>
+        </div> <!-- fin enveloppe principale -->
+
+    </body>
+</html>

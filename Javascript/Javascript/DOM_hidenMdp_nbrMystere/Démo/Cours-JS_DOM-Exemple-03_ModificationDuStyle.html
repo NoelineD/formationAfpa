@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!--
+Exemple 01 JS : Test de modification de la propriété style d'une balise
+-->
+<html>
+    <head>
+        <title>Modification de la propriété style</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--style>
+            /* attention les propriétés css n initialise pas les propriétés des balises concernées  */
+            p {
+                text-align:center; font-size:20px; color:blue;
+            }
+        </style-->
+        <script>
+        function test() {
+                let p = document.getElementsByTagName("p")[0];
+                alert("style du paragraphe p avant modification\nalignement : " + p.style.textAlign + "\ncouleur : " +
+                        p.style.color + "\ntaille : " + p.style.fontSize);
+                // modification des styles
+                // test de la propriété textAlign
+                if(p.style.textAlign == "center")
+                    p.style.textAlign = "right";
+                else
+                    p.style.textAlign = "center";
+                p.style.fontSize = "30px";
+                p.style.color = "red";
+                alert("style du paragraphe p après modification\nalignement : " + p.style.textAlign + "\ncouleur : " +
+                        p.style.color + "\ntaille : " + p.style.fontSize);
+
+            }
+        </script>
+    </head>
+    <body>
+        <h3>Test de modification de la propriété style d'une balise</h3>
+        <br /><br />
+        <!-- ici les propriétés de css existent et peuvent être testées -->
+        <p style="text-align:center; font-size:20px; color:blue">Texte</p>
+        <p>Texte</p>
+        <input type="button" value="Tester" onclick="test()" />
+    </body>
+</html>

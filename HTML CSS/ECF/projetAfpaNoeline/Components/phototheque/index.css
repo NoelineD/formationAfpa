@@ -1,0 +1,559 @@
+* {
+    box-sizing: border-box;
+    margin: 0; 
+    padding: 0;
+}
+
+html,
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        /* Font size à ajouter */
+        background: #eee;
+        width: 95%;
+        margin: .5em auto; 
+        /* 8/16 haut et bas + centrage horizontal; */
+    }
+    
+.container{
+    width:100%;
+}
+
+/******** Header ********/
+header{
+    
+    background-color:#0F1F28 ;
+    color:white;
+    height:17em;
+    font-size: x-small;
+}
+
+figure{
+    display:flex;
+}
+
+
+.members{
+    cursor:pointer;
+    width:10em;
+    height:2.5em;
+    background: linear-gradient(#edf1f3, #35848b);
+    padding:0.1em;
+    border-radius:8px;
+    border:5px rgb(45, 186, 221)
+}
+
+/* Navigation Desktop */
+ul{
+display:flex;
+list-style-type: none;
+justify-content: space-around;
+width:85%;
+}
+
+nav>ul>li>a {
+    text-align:center;
+    display:block;
+    text-decoration: none;
+    color:white;
+    background: linear-gradient(#b2cad6, #35848b);
+    padding:5px;
+    width:7rem;
+    border-radius:3em;
+    font-size:0.9em;
+}
+
+nav>ul>li>a:hover{
+color:#050505;
+}
+
+#sousmenu {
+    display: none;
+    font-style:italic;
+    line-height: 1em;
+    background-color: rgb(248, 251, 251);
+}
+
+nav>ul li:hover #sousmenu {
+    display: block;
+    position:relative;
+    width:9em;
+}
+
+.sous{
+ flex-direction:column;
+}
+
+.sous a:hover {
+    background-color:#8DB8BD;
+    text-decoration:none;
+}
+
+.sous a{
+    text-decoration: none;
+    color:black;
+}
+
+/* Fin Navigation Desktop */
+      
+      /* --Animations avec @keyframes du scrolling sous l'image active--*/
+      @keyframes barre {
+        from {
+          left: -100%;
+        }
+      
+        to {
+          left: 0;
+        }
+      }
+      
+      /*Animations avec @keyframes du défilement des image/*
+      KEYFRAME = point de repère
+      0% = point de départ de l'animation (DEBUT)
+      100% = point d'arrivée de l'animation (FIN)
+      */
+      
+      @keyframes defilement {
+        0% {
+          left: 0%; 
+        }
+
+        25% {
+            left: -100%; 
+          }
+      
+        50% {
+          left: -200%; 
+        }
+      
+        100% {
+          left: 0%; 
+        }
+      }
+      
+      .auto-slider {
+        position: relative;
+        box-sizing: border-box;
+        display: block;
+        max-width:600px; /*Modifie w du cadre et adapte taille photo  */
+        padding: 0;
+        background-color: #ffffff;
+        margin: 0 auto;
+        overflow: hidden;
+        box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+      }
+      
+      #slides {
+        overflow: hidden;
+        border: solid 0px rgb(42, 43, 42);
+        position: relative;
+      }
+      
+      #slides figure {
+        position: relative;
+        width: 150%;  /* modifie w interieur rétrécit photo si - */
+        margin: 0;
+        border: solid 0px #4b4354;
+        animation: defilement 25s ease infinite;
+      }
+
+      /* defilement */
+    
+      #slides figure img {
+        width: 25%;
+        float: left;
+      }
+      
+      /* Indicateur de défilement sous l'image */
+      .scrolling {
+        width: 100%;
+        max-width: 100%;
+        height: 4px;
+        background-color: #848587;
+        position: absolute;
+        bottom: 0;
+        animation: barre 10s ease infinite;
+      }
+
+      /**************** Filtrage PHOTO Animation 2 *****************/
+      :root {
+        --art: #fefffd;
+        --voyage: #1FC6CF;
+        --lights: #fefffd;
+    }
+
+    .box {
+        margin: 5px;
+        float: left;
+        transition: all 0.5s;
+    }
+
+    .box-art {
+        background-color: var(--art);
+    }
+
+    .box-voyage {
+        background-color: var(--voyage);
+    }
+
+    .box-lights {
+        background-color: var(--lights);
+    }
+  
+    input[type="radio"] {
+        display: none;
+    }
+
+    label {
+        width: 200px;
+        padding: 5px;
+        border: solid 0px rgb(12, 11, 11);
+        cursor: pointer;
+    }
+
+   /*------------------------- Art ------------------------------*/
+
+    /*---Selectionne le LABEL situé juste après l'input de type RADIO sur lequel on vient de cliquer-*/
+    input[type="radio"][id="art"]:checked+label {
+        background-color: var(--art);
+    }
+
+    /*---Elimine les DIV dont les classes ne correspondent pas à la classe de DIV que l'on souhaite afficher--*/
+
+    input[type="radio"][id="art"]:checked~.box-voyage,
+    input[type="radio"][id="art"]:checked~.box-lights {
+        opacity: 0;
+        width: 0;
+        height: 0;
+        padding: 0;
+        margin: 0;
+    }
+
+    /*-------------------------Voyage ------------------------------*/
+
+    input[type="radio"][id="voyage"]:checked+label {
+        background-color: var(--voyage);
+    }
+
+
+    input[type="radio"][id="voyage"]:checked~.box-art,
+    input[type="radio"][id="voyage"]:checked~.box-lights
+    {
+        opacity: 0;
+        width: 0;
+        height: 0;
+        padding: 0;
+        margin: 0;
+    }
+
+
+     /*-------------------------Lights ------------------------------*/
+
+    input[type="radio"][id="lights"]:checked+label {
+        background-color: var(--lights);
+    }
+
+
+    input[type="radio"][id="lights"]:checked~.box-art,
+    input[type="radio"][id="lights"]:checked~.box-voyage
+     {
+        opacity: 0;
+        width: 0;
+        height: 0;
+        padding: 0;
+        margin: 0;
+    }
+
+/* Footer */
+footer{
+  display:flex;
+  height:5em;
+  background-color:#0F1F28 ;
+  color:white;
+  justify-content: space-between;
+}
+
+footer>div>a{
+text-decoration: none;
+padding:2em;
+color:white;
+  }
+
+/******** mobile Only *********/
+
+@media screen and (max-width: 767px) {
+
+/*Header*/    
+header{  
+        font-size: x small;
+        
+    }
+
+/*Nav Desktop invisible en mode mobile*/ 
+.navbar{
+    display:none;
+}
+
+/*Nav Version mobile*/
+
+.menuBurger{
+    background-color:#0F1F28 ;
+    height:20px;
+    width:100%;
+    padding: 2em 0 1em 0;
+    /* Z-index:2; */
+}
+
+#menu__toggle {
+    opacity: 0;
+  }
+  #menu__toggle:checked + .menu__btn > span {
+    transform: rotate(45deg);
+  }
+  #menu__toggle:checked + .menu__btn > span::before {
+    top: 0;
+    transform: rotate(0deg);
+  }
+  #menu__toggle:checked + .menu__btn > span::after {
+    top: 0;
+    transform: rotate(90deg);
+  }
+  #menu__toggle:checked ~ .menu__box {
+    left: 0 !important;
+  }
+ 
+  .menu__btn {
+    position: fixed;
+    display:inline-block;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    Z-index:3;
+  }
+
+  .menu__btn > span,
+  .menu__btn > span::before,
+  .menu__btn > span::after {
+    display: block;
+    position: absolute;
+    width: 35px;
+    height: 2px;
+    background-color: #959090;
+    transition-duration: .25s;
+  }
+
+  .menu__btn > span::before {
+    content: '';
+    top: -8px;
+  }
+  .menu__btn > span::after {
+    content: '';
+    top: 8px;
+  }
+  .menu__box {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 250px;
+    height: 100%;
+    margin: 0;
+    padding: 80px 0;
+    list-style: none;
+    background-color: #e4e4e4;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, .4);
+    transition-duration: .25s;
+    z-index:2;
+  }
+  .menu__item {
+    display: block;
+    padding: 12px 24px;
+    color: #333;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    text-decoration: none;
+    transition-duration: .25s;
+  }
+  .menu__item:hover {
+    background-color: #B7DBDE;
+  }
+
+/* sousmenu */
+
+#sousmenu_item {
+    display: none;
+    font-style:italic;
+    line-height: 2em;
+    background-color: #e4e4e4;
+    
+}
+
+div>ul li:hover #sousmenu_item {
+    display: block;
+    position:relative;
+    width:11em;
+    margin-left:25px;
+}
+
+#sousmenu_box{
+ flex-direction:column;
+}
+
+#sousmenu_box a:hover {
+    background-color:#8DB8BD;
+    text-decoration:none;
+}
+
+#sousmenu_box a{
+    text-decoration: none;
+    color:black;
+}
+
+/*Fin Nav Version mobile*/
+
+/*Header*/
+figure{
+    justify-content: center;
+}
+
+figure>img{
+width:40em;
+height:auto;
+margin:2em;
+justify-content: center;
+}
+.date{
+    display:flex;
+    gap:2rem;
+    align-items: center;
+    margin-right:1em;
+    font-size:12px;
+    justify-content: center;
+}
+
+/* BTN Adhérent */
+.members {
+    height:2em;
+    font-size:12px;
+    width:7rem;
+}
+
+
+/* Main Content */
+
+.maincontent{
+    background-color: #a0d9de;
+    margin:0.5em 0em 0.5em 0em;
+    height:150em;
+    width:100%;
+    padding:1em;
+    overflow:hidden;
+    }
+
+P {
+    font-size:0.8em;  
+}
+
+h1{
+    font-size:1.2em;
+}
+/* Slider Equipe */
+.auto-slider{
+ font-size:0.8em;
+ margin:1em;
+}
+
+/* Filtrage Galerie Photo */
+article {
+  width: 90%;
+  margin-left:20px;
+}
+
+.box {
+Height:150px;
+width:150px;
+}
+/* Fin Main Content */
+
+/* Footer */
+footer{
+ padding:1em;
+ align-items: center;
+}
+
+footer>div:first-of-type{
+   bottom:5px;
+}
+
+footer>div>a{
+  font-size: 10px;
+        }     
+}
+
+
+@media screen and (min-width: 767px) {
+/* Nav mobile invisible */
+.menuBurger{
+    display:none;
+}
+
+/* Header*/
+.navbar{
+    display:inline-block;
+    background-color:#0F1F28 ;
+    color:black;
+    height:80px;
+    width:100%;
+    padding:1em;
+}
+   
+  figure>img{
+   width:40em;
+   height:auto;
+   margin:2em 0 2em 2em;
+        }
+
+  header{
+   display:flex;
+   justify-content: space-between;
+   padding-right:50px;
+    }
+
+  .date{
+    font-size:10px;
+    text-align: right;
+    width:20em;
+    margin:3em;
+        }
+
+    
+  .members{
+    font-size:12px;
+    width:7rem;
+    margin:1em 0 0 10em;
+        }
+    
+ /***** Milieu *****/
+  .maincontent{
+    background-color: #a0d9de;
+    margin:0.5em 0.5em 0.5em 0;
+    width:100%;
+    height:135em;;
+    padding:2em;
+    }
+
+/* Galerie photos */
+article {
+  width: 90%;
+  margin-left: 50px;
+}
+
+.box {
+ width: 200px;
+ height: 200px;
+  }
+
+footer{
+ align-items: center;
+ padding:2em;
+    }
+} 

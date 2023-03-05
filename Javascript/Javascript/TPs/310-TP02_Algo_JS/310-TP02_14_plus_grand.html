@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<!--
+*********************************************************************
+  Nom du programme  :  310-Exo_P1_14_plus_grand.html
+  Auteur            :  Bonneau Didier 
+  Mise a jour       :  septembre 2019
+  Fonction          :  Recherche du plus grand de 10 nombres
+*********************************************************************
+-->
+<html>
+    <head>
+        <title>Recherche du plus grand nombres</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        
+    	<script>
+    	
+            var nbr, i, plusGrand;
+            var indexGrand = 0;
+
+            plusGrand = 0;
+            for( i = 1; i <= 5; i++){
+                //saisie
+               nbr = parseInt(prompt('Entre un nombre'));
+
+               // test si premier nombre ou si plus grand
+               if( i == 1 || nbr > plusGrand ) {
+                  plusGrand = nbr;
+                  indexGrand = i;
+               }
+           }
+           alert('Le nombre le plus grand était : ' + plusGrand);
+           alert('Sa position était : ' + indexGrand); 
+    	</script>
+
+
+    </body>
+</html>

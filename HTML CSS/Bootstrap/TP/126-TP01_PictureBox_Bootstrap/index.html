@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+    <head>
+        <title>Picture Box Bootstrap</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/bootstrap.css" rel="stylesheet" type="text/css" />
+        <style>
+            /*.catalogue {
+                overflow-x: scroll;
+            }*/
+            .catalogue li {
+                min-width: 200px;
+            }
+        </style>
+
+    <body>
+        <div class="container">
+            <header>
+                <h1 class="text-center"><span class="">Histoire du graphisme</span></h1>
+            </header>
+            <!-- Navigation albums -->
+            <nav class="navbar navbar-expand-lg bg-info overflow-scroll catalogue">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">Collection</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collection" aria-controls="collection" aria-expanded="false"
+                            aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="collection">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item active btn btn-primary ms-2 me-2">Le Psychédélisme</li>
+                            <li class=" nav-item btn btn-secondary ms-2 me-2">Le Futurisme</li>
+                            <li class="nav-item btn btn-secondary ms-2 me-2">l'Art déco</li>
+                            <li class="nav-item btn btn-secondary ms-2 me-2">Le Constructivisme</li>
+                            <li class="nav-item btn btn-secondary ms-2 me-2">Le Punk</li>
+                            <li class="nav-item btn btn-secondary ms-2 me-2">AEG</li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <main class="row">
+                <div class="col-sm-12 col-md-2 col-lg-4"> <!-- miniatures -->
+                    <img class="img-thumbnail" src="albums/psyche/miniatures/mousekelley-01.jpg" alt="mousekelley-01" title="Le Psychédélisme" />
+                    <img class="img-thumbnail" src="albums/psyche/miniatures/mousekelley-02.jpg" alt="mousekelley-02" title="Le Psychédélisme" />
+                    <img class="img-thumbnail" src="albums/psyche/miniatures/mousekelley-03.jpg" alt="mousekelley-03" title="Le Psychédélisme" />
+                    <img class="img-thumbnail" src="albums/psyche/miniatures/mousekelley-04.jpg" alt="mousekelley-04" title="Le Psychédélisme" />
+                    <img class="img-thumbnail" src="albums/psyche/miniatures/mousekelley-05.jpg" alt="mousekelley-05" title="Le Psychédélisme" />
+                </div>
+                <div class="col-sm-12 col-md-10 col-lg-8 text-center"> <!-- grande image et reflet -->
+                    <h2 id="titreGrandeImage" class="center">Le Psychédélisme</h2>
+                    <img class="img-fluid" src="albums/psyche/images/mousekelley-01.jpg" alt="Mouse and Stanley Mouse, is an American artist, notable for his 1960s
+                         psychedelic rock concert poster designs" title="mousekelley-01" />
+                    <!-- textes en surimpression sur le reflet -->
+                    <div id="textesImage">
+                        <p id ="texteGrandeImage" class="center">mousekelley-01</p>
+                    </div>            
+                </div>
+            </main> <!-- fin enveloppe principale -->
+
+
+        </div>
+        <script src="js/bootstrap.bundle.js"></script>
+
+    </body>
+
+</html>

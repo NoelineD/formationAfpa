@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<!--
+*********************************************************************
+  Nom du programme  :  310-Exo_P2_04a_tri_insertion_tableau.html
+  Auteur            :  Bonneau Didier 
+  Mise a jour       :  septembre 2019
+  Fonction          :  Tri d'un tableau par insertion
+*********************************************************************
+-->
+<html>
+    <head>
+        <title> Tri d'un tableau par insertion</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        
+    	<script type="text/javascript">
+    	
+            let tab = [4,8,7,9,1,5,4,6];
+            let idx1, idx2, posMax, temp;
+
+            // traitement
+           
+            for (idx1 = 0; idx1 < tab.length - 1; idx1++) {
+
+                posMax = idx1;
+                for (idx2 = idx1 + 1; idx2 < tab.length; idx2++) {
+                    if (tab[idx2] > tab[posMax]){
+                        posMax = idx2;
+                    }
+                }
+                temp = tab[posMax];
+                tab[posMax] = tab[idx1];
+                tab[idx1] = temp;
+            }
+
+            //affichage du tableau
+            for (idx in tab) {
+                document.write('<h1>valeur ' + idx + ' : ' + tab[idx] + '</h1>');
+            }
+
+        </script>
+
+    </body>
+</html>

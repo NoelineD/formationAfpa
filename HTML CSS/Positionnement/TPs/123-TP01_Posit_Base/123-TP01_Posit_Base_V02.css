@@ -1,0 +1,48 @@
+/* 
+123-TP01_Posit_Base_V02.css
+Feuille de style du TP 123-TP01_Posit_Base.html
+Didier Bonneau DWWM Afpa Créteil maj 07-03-2022
+*/
+html, body {
+	margin: 0;
+	padding: 0;
+}
+
+#wrap {
+	/*position:absolute;*/
+        position:relative;
+	margin: 0 auto;
+    width: 1024px;
+	height: 694px;
+}
+
+header {
+	position:absolute;
+	left: 5px;
+	top: 5px;
+	height: 78px;
+	width: 1012px;
+	border-style:solid;
+	border-width:thin;
+}
+
+nav {
+	position: absolute;
+	height: 604px;
+	width: 198px;
+	left: 5px;
+	top: 90px;
+	border-style:solid;
+	border-width:thin;
+}
+
+main {
+	position: absolute;
+	width: 807px;
+	left: 210px;
+	top: 90px;
+	height: 604px;
+	border-style:solid;
+	border-width:thin;
+}
+

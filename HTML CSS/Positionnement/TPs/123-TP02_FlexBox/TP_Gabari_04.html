@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Complex flexbox example</title>
+  <style>
+    html {
+      font-family: sans-serif;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    header {
+      background: purple;
+      height: 100px;
+      margin: 10px;
+    }
+
+    main {
+      height: 400px;
+    }
+
+    h1, h2 {
+      text-align: center;
+      color: white;
+      line-height: 100px;
+    }
+
+    .box {
+      background: aqua;
+      border: 1px solid black;
+      margin: 10px;
+    }
+
+    /* Add your flexbox CSS below here */
+
+    .flex100 {
+      display: flex;
+      /*flex-wrap: wrap;*/
+      width: 100%;
+      justify-content: center;
+    }
+
+    .flex50 {
+      display: flex;
+      flex-wrap: wrap;
+      width: 50%;
+      justify-content: center;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>le gabari</h1>
+  </header>
+
+  <main class="flex100">
+    <article class="flex50 box">
+      <h2>article 1</h2>
+    </article>
+
+    <article class="flex50">
+      <div class="flex100 box">
+        <h2>article 2</h2>
+      </div>
+      <div class="flex50 box">
+        <h2>article 3</h2>
+      </div>
+      <div class="flex50 box">
+        <h2>article 4</h2>
+      </div>
+    </article>
+  </main>
+</body>
+
+</html>

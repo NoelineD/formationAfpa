@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<!--
+*********************************************************************
+  Nom du programme  :  310-Exo_P2_08_crypto_3.html
+  Auteur            :  Bonneau Didier 
+  Mise a jour       :  septembre 2019
+  Fonction          :  Cryptographie
+*********************************************************************
+-->
+<html>
+    <head>
+        <title>Cryptographie</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        
+    	<script type="text/javascript">
+    	
+            let phrase, phraseCryptee = '', code, lettre;
+            const alpha = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+            let indiceLettre = 0, indiceLettreCryptee = 0;
+
+            code = prompt('Entrer la clé de cryptage :');
+            phrase = prompt('Entrer la phrase à crypter :');
+            document.write('<h1>phrase non cryptée : ' + phrase + '</h1>');
+
+            for (indiceLettre = 0; indiceLettre < phrase.length; indiceLettre++) {
+
+                lettre = phrase[indiceLettre];
+
+                // recherche de la lettre transformée en majuscule
+                indiceLettreCryptee = alpha.indexOf(lettre.toUpperCase()); // si lettre non truvée : indiceLettreCryptee égale à -1
+                
+                if ( indiceLettreCryptee !== 26) {
+                    lettre = code[indiceLettreCryptee];
+                    console.log(indiceLettreCryptee);
+                    console.log(lettre);
+                }
+                
+                phraseCryptee += lettre;
+            }
+
+            document.write('<h1>phrase cryptée : ' + phraseCryptee + '</h1>');
+
+        </script>
+
+    </body>
+</html>

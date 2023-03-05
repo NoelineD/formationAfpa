@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <title>essai</title>
+  <meta charset="utf-8">
+</head>
+
+<body>
+
+  <script type="text/javascript">
+    
+    let personne = {
+      nom: 'toto',
+      prenom: 'Jean',
+      age: 25,
+      adresse: {
+        numero: 5,
+        rue: 'Marc Seguin',
+        codePost: 94000,
+        ville: 'Créteil'
+      }
+    }
+
+    personne.nom = 'Dupond';
+    console.log(typeof(personne));
+    console.log(personne.nom);
+    console.log(personne.adresse.ville);
+  </script>
+
+</body>
+</html>

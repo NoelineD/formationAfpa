@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<!--
+Validation d'un formulaire
+Fichier HTML du TP : 322-TP08_JS_Dom_Valid_Form
+Didier Bonneau Afpa DWWM Créteil maj 29-07-2021
+-->
+<html>
+    <head>
+        <title>Un beau formulaire</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="322-TP08_JS_Dom_Valid_Form.css" rel="stylesheet" type="text/css"/>
+        <script src="322-TP08_JS_Dom_Valid_Form.js"></script>
+    </head>
+    <body>
+        <h1 align="center">Renseignements vous concernant</h1>
+        <h3 align="center">(les champs précédés d'une * sont obligatoires)<br />
+        </h3>
+        <form id="renseigne" name="renseigne" method="post" enctype="multipart/form-data" action="#">
+            <fieldset>
+                <legend><strong><em>Votre identité</em></strong></legend>
+                <p>
+                    <label class="requi" for="nom">Votre nom : </label>
+                    <input name="nom" type="text" id="nom" tabindex="1" size="25" maxlength="50" />
+
+                    <label for="photo">&nbsp;&nbsp;&nbsp;&nbsp;Votre photo d'identité : </label>
+                    <input type="file" name="photoIdent" id="photo" />
+                </p>
+                <p>
+                    <label class="requi" for="prenom">Votre prénom : </label>
+                    <input name="prenom" type="text" id="prenom" tabindex="2" size="25" maxlength="50" />
+                </p>
+                <p>
+                    <label for="adresse">Votre adresse : </label>
+                    <textarea name="adresse" id="adresse" cols="45" rows="3" tabindex="3"></textarea>
+                </p>
+                <p>
+                    <label for="codePost">Votre code postal : </label>
+                    <input type="text" name="codePost" id="codePost" tabindex="4" pattern="^\d{5}$" placeholder="5 chiffres" />
+
+                    <label for="ville">&nbsp;&nbsp;&nbsp;&nbsp; Votre ville : </label>
+                    <input name="ville" type="text" id="ville" tabindex="5" size="40" />
+                </p>
+                <p>
+                    <label class="requi" for="telephone">Votre téléphone : </label>
+                    <input type="text" name="telephone" id="telephone" tabindex="6"
+                        onblur="miseFormeTel(this)" onfocus="deMiseFormeTel(this)" maxlength="10" placeholder="forme 01 23 45 67 89"            !-- pattern="^0[1-9](\s)(\d{2}\1){3}\d{2}$">
+                    <label class="requi" for="mail">&nbsp;&nbsp;&nbsp;&nbsp; Votre mail : </label>
+                    <input name="mail" type="text" id="mail" tabindex="7" size="50" />
+                </p>
+            </fieldset>
+            <br />
+            <fieldset>
+                <legend><strong><em>Vos connaissances générales</em></strong></legend>
+                <br>
+                <label>Lisez vous une ou plusieurs revues informatiques ?</label>
+                <input type="radio" name="revueInfo" id="revueOui" value="infoOui" tabindex="8" /><label for="revueOui"> oui </label>
+                <input type="radio" name="revueInfo" id="revueNon" value="infoNon" tabindex="9" checked="checked" /><label for="revueNon"> non </label>
+                <div id="infoRevues" class="cache">
+                    <br>
+                    <label for="listeRevue">&nbsp;&nbsp;&nbsp;&nbsp;Si oui lesquelles ?</label>
+                    <textarea name="listeInfo" id="listeRevue" cols="65" rows="3" tabindex="10"></textarea>
+                </div>
+                <br><br>
+                <label>Consultez vous un ou plusieurs sites informatiques ?</label>
+                <input type="radio" name="siteInfo" id="siteOui" value="infoOui" tabindex="8" /><label for="siteOui"> oui </label>
+                <input type="radio" name="siteInfo" id="siteNon" value="infoNon" tabindex="9" checked="checked" /><label for="siteNon"> non </label>
+                <div id="infoSites" class="cache">
+                    <br>
+                    <label for="listeSite">&nbsp;&nbsp;&nbsp;&nbsp;Si oui lesquels ?</label>
+                    <textarea name="listeInfo2" id="listeSite" cols="65" rows="3" tabindex="10"></textarea>
+                </div>
+            </fieldset>
+            <br />
+            <fieldset>
+                <legend><strong><em>Vos intérêts</em></strong></legend>
+                <p><label>Vous vous intéressez :</label></p>
+                <p>
+                    <input type="checkbox" name="intWeb" value="vrai" id="intWeb" tabindex="12" />
+                    <label for="intWeb">à la programmation Web</label>
+                </p>  
+                <p>
+
+                    <input type="checkbox" name="intProg" id="intProg" tabindex="13" />
+                    <label for="intProg">à la programmation informatique</label>
+                </p>
+                <p>
+                    <input type="checkbox" name="intJeux" id="intJeux" tabindex="14" />
+                    <label for="intJeux">aux jeux vidéos</label>
+                </p>
+            </fieldset>
+            <br />
+            <input name="soumettre" type="submit" value="Soumettre" title="Soumettre le formulaire" />
+            <input name="raz" type="button" value="R&eacute;initialiser" title="Réinitialiser le formulaire" />
+        </form>
+    </body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!--
+*********************************************************************
+  Nom du programme  :  310-Exo_P1_09_impot.html
+  Auteur            :  Bonneau Didier 
+  Mise a jour       :  septembre 2019
+  Fonction          :  Afficher si imposable en fonction de son age
+*********************************************************************
+-->
+<html>
+    <head>
+        <title>Impot en fonction de l'age et sexe</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+
+        <script>
+
+            // Déclaration des variables 
+            var sex, age;
+            var impot = "Non imposable";
+            // Déclaration des constantes
+            const AGE_MIN_HOMME = 20;
+            const AGE_MIN_FEMME = 18;
+            const AGE_MAX_FEMME = 35;
+
+            // Saisie du nombre
+            sex = prompt("Entrez le sexe (M/F)");
+            age = prompt("Entrez l'age' : ");
+
+            // Traitement du calcul
+            crit1 = (sex == "M" || sex == "m") && (age > AGE_MIN_HOMME);
+            crit2 = (sex == "F" || sex == "f") && (age > AGE_MIN_FEMME) && (age < AGE_MAX_FEMME);
+
+            if (crit1 || crit2) {
+                impot = "Imposable";
+            }
+
+            // Affichage du résultat
+            alert("Cet habitant est " + impot);
+
+        </script>
+
+
+    </body>
+</html>

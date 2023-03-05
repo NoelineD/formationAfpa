@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="fr"> 
+    <head> 
+        <title>Le positionnement 03</title> 
+        <meta charset="UTF-8">
+        <meta name="author" content="Didier Bonneau">
+        <style>
+            /* Positionnement des différents conteneur 
+                conteneur reste dans le flux
+                header reste dans le flux
+                menu est en position flotante à gauche et est donc sorti du flux
+                    mais garde sa place pour les éléments suivants
+                contenu reste dans le flux mais est décalé de la largeur du menu
+                    pour éviter en l'enrobage (tester avec menu plus grand et en 
+                    enlevant la marge sur le contenu)
+                pied reste dans le flux  */
+            #conteneur {width:900px; margin: 0 auto;}
+            #menu {float: left; width: 198px; height: 500px; }
+            #contenu {margin-left: 200px;}
+
+            #entete {background-color: #99ccff;}
+            #menu {background-color: #33ffff;}
+            #contenu {background-color: #99ffff;}
+            #pied {background-color: #ff66ff;}
+            /*#contenu div {display: table-cell;}
+            #contenu div:nth-child(2) {width: 500px;}*/
+            div {border: solid 1px;}
+            #contenu div {border-width: 1px 0px;}
+            h1, h2 {text-align: center;}
+        </style>
+    </head> 
+    <body>
+        <div id="conteneur">
+            <div id="entete">
+                <h1>Le menu est en float left<br/>
+                    le contenu a une margin-left = à la largeur du menu</h1>
+                <h2>Hauteur du menu > hauteur contenu</h2>
+            </div>
+            <div id="menu">
+                <h2>Menu</h2>
+                <ul>
+                    <li><a href="">Accueil</a></li>
+                    <li><a href="">Item 1</a></li>
+                    <li><a href="">Item 2</a></li>
+                    <li><a href="">Item 3</a></li>
+                    <li><a href="">Contact</a></li>
+                </ul>
+            </div>
+            <div id="contenu">
+                <h1>Sujet de la page</h1>
+                <div>
+                    <h2>Sujet de l'article</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed
+                        non risus. Suspendisse lectus tortor, dignissim sit amet,
+                        adipiscing nec, ultricies sed, dolor. Cras elementum ultrices
+                        diam.Lorem ipsum dolor sit amet, consectetuer adipiscing
+                        elit...</p>
+                </div>
+                <div>
+                    <h3>Archives</h3>
+                    <ul>
+                        <li><a href="">Août 201x</a></li>
+                        <li><a href="">Juillet 201x</a></li>
+                        <li><a href="">Juin 201x</a></li>
+                        <li><a href="">Mai 201x</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div id="pied">
+                <h3>&copy; Copyright DWWM Afpa Créteil 2019</h3>
+            </div>
+        </div>
+    </body> 
+</html>

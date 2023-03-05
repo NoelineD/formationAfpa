@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/Components/form/index.css" rel="stylesheet" type="text/css"/>
+    <title>Document</title>
+</head>
+<body>
+<br>
+   <div id="home"><a href="/home.html">Home Page</a></div><br>
+
+<div class="containerform">
+    <form id="renseigne" name="renseigne" method="post" action="#">
+        <fieldset>
+            <legend><strong><em>Votre identité</em></strong></legend>
+            <p>
+                <label class="requi" for="nom">Votre nom : </label>
+                <input name="nom" type="text" id="nom" tabindex="1" size="25" maxlength="50" required>
+            </p>
+            <p>
+                <label class="requi" for="prenom">Votre prénom : </label>
+                <input name="prenom" type="text" id="prenom" tabindex="2" size="25" maxlength="50" required>
+            </p>
+            <p>
+                <label class="requi" for="telephone">Votre téléphone : </label>
+                <input type="tel" name="telephone" id="telephone" tabindex="6"size='25' required>
+            </p>
+            <p>
+            <label class="requi" for="mail"> Votre mail : </label>
+            <input name="mail" type="email" id="mail" tabindex="7" size="25" required>
+            </p>
+        </fieldset>
+        <br>
+        <div id="checkbox">
+        <fieldset id="interets">
+            <legend><strong><em>Vos intérêts</em></strong></legend>
+            
+            <p>
+                <input type="checkbox" name="devnb" value="vrai" id="devnb" tabindex="12">
+                <label for="devnb" >Développement Noir & Blanc</label>
+            </p>  
+            <p>
+
+                <input type="checkbox" name="prisedv" value="vrai" id="prisedv" tabindex="13">
+                <label for="prisedv">Prises de vues</label>
+            </p>
+            <p>
+                <input type="checkbox" name="studio" value="vrai" id="studio" tabindex="14">
+                <label for="studio">Travail en studio</label>
+            </p>
+            <p>
+                <input type="checkbox" name="expo" value="vrai" id="expo" tabindex="14">
+                <label for="expo" >Participation à des expositions</label>
+            </p>
+        </fieldset>
+            <fieldset id="niveau">
+                <legend><strong><em>Votre niveau</em></strong></legend>
+                   <ul>
+                    <li><input type="radio" name="niveau" id="debutant" value="debutant" tabindex="8"><label for="debutant"> Débutant </label></li>
+                    <li> <input type="radio" name="niveau" id="confirme" value="confirme" tabindex="9" checked="checked" ><label for="confirme"> Confirmé </label></li>
+                    <li> <input type="radio" name="niveau" id="expert" value="expert" tabindex="9" checked="checked" ><label for="expert"> Expert </label></li>
+                </ul> 
+        </fieldset>
+    </div>
+        <br>
+        <fieldset> <textarea></textarea>
+         <legend><strong><em>Matériel en votre possession</em></strong></legend>
+
+        </fieldset>
+    <br>
+    <input name="soumettre" type="submit" value="Valider" title="Soumettre le formulaire">
+    </form>   
+</div>
+</body>
+</html>

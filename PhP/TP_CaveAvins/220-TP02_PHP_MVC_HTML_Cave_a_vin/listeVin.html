@@ -1,0 +1,33 @@
+    <div>
+        <h1>Liste des vins</h1>
+        <div class="card-columns">
+        <!-- boucle sur les vins récupérés de la base -->
+            <div class="card bg-light mb-3" style="max-width: 18rem;">
+                <div class="card-header"><!-- afficher la région --></div>
+                <div class="row no-gutters">
+                    <div class="col-8">
+                        <div class="card-body">
+                            <h5 class="card-title"><!-- afficher le nom du vin --></h5>
+                            <p class="card-text"><!-- afficher la robe --> année <!-- afficher le millésime --></p>
+                            <p class="card-text">cépage : <!-- afficher le cépage --></p>
+                            <p class="card-text">prix ht : <!-- afficher le prix HT --></p>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <img class="card-img mt-4" src="<!-- le nom du fichier image du vin -->" alt="image du vin">
+                    </div>
+                </div>
+                    <!-- si l'utilisateur est connecté -->
+                    <form method="post" action="<!-- url ajout vin -->">
+                        <input type="hidden" name="idVin" value="<!-- mettre id du vin -->">
+                        <button type="submit" class="btn btn-secondary">Ajouter au panier</button>
+                    </form>
+                    <!-- fin de si -->
+                    <!-- si l'utilisateur connecté est de rôle ADMIN -->
+                        <a class="btn btn-secondary" href="<!-- url modif vin + id du vin -->">Modifier</a>  
+                   <!-- fin de si -->
+            </div>
+        <!-- fin de boucle -->
+        </div>
+    </div>
+

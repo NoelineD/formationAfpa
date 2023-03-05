@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!--
+322-TP03_JS_Dom_Input_V01
+Sélection dans des balises input de type text
+Didier Bonneau DWWM Afpa Créteil maj 29/07/2020
+-->
+<html>
+    <head>
+        <title>322-TP03_JS_Dom_Input_V01 : Modifier le contenu d'une balise</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+            function modif() {
+                let nom = document.getElementById('idNom').value;
+                let prenom = document.getElementById('idPrenom').value;
+                if (nom !== '' && prenom !== ''){
+                    document.getElementById('idDivModif').innerHTML = '<h1>Bonjour ' + nom + ' ' + prenom + '</h1>';
+                } else {
+                    alert('le nom ou le prénom est vide');
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Modifier le contenu d'une balise</h1>
+        <div id="idDivModif">
+            <form action="#">
+                <label for="idNom">Entrer votre nom </label>
+                <input type="text" name="nom" id="idNom" /><br /><br />
+                <label for="idPrenom">Entrer votre prénom </label>
+                <input type="text" name="prenom" id="idPrenom" /><br /><br />
+                
+                <button onclick="modif()">Modifier</button>
+            </form>
+        </div>
+
+    </body>
+</html>

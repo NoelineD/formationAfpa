@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!--
+Recherche du nom d'une ville par l'API https://geo.api.gouv.fr
+Fichier HTML du TP : 323-TP02_JS_AJAX_Ville
+Didier Bonneau Afpa DWWM Créteil maj 29-07-2022
+-->
+<html>
+    <head>
+        <title>Recherche d'une ville</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="323-TP02_JS_AJAX_Ville.js"></script>
+    </head>
+    <body>
+        <h1 align="center">Recherche d'une ville par code postal</h1>
+        <h3 align="center">(Utilisation de l'API https://geo.api.gouv.fr)<br />
+        </h3>
+        <form method="get" action="#">
+            <fieldset>
+                <legend><strong><em>Votre adresse</em></strong></legend>
+                <p>
+                    <label for="code_post">Code postal : </label>
+                    <input name="code_post" type="text" id="code_post" pattern="^\d{5}$" placeholder="5 chiffres"/>
+
+                    <label for="ville">Votre ville : </label>
+                    <select name="ville" id="ville">
+                        <option>Selection de la ville</option>
+                    </select>
+                </p>
+            </fieldset>
+            <br />
+            <input name="soumettre" type="submit" value="Soumettre" title="Soumettre le formulaire" />
+            <input name="raz" type="button" onclick="resetForm();" value="R&eacute;initialiser" title="Réinitialiser le formulaire" />
+        </form>
+    </body>
+</html>

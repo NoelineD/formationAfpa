@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!--
+*********************************************************************
+  Nom du programme  :  310-Exo_P1_07_categorie.html
+  Auteur            :  Bonneau Didier 
+  Mise a jour       :  septembre 2019
+  Fonction          :  Afficher la catégorie d'un enfant en fonction de son age
+*********************************************************************
+-->
+<html>
+    <head>
+        <title>Catégorie d'un enfant</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        
+    	<script>
+    	
+            var age;
+            var categorie
+            
+            const CADET = 12, MINIME = 10, PUPILLE = 8, POUSSIN = 6;
+            
+    		//saisie
+    		age = prompt('Entre l\'age de l\'enfant : ');
+
+            if (age < POUSSIN) {
+                categorie = 'sans catégorie';
+            } else {
+                if (age < PUPILLE) {
+                    categorie = 'Poussin';
+                } else {
+                    if (age < MINIME) {
+                        categorie = 'Pupille';
+                    } else {
+                        if (age < CADET) {
+                            categorie = 'Minime';
+                        } else {
+                            categorie = 'Cadet';
+                        }
+                    }
+                }
+            }
+            
+            alert('Sa catégorie est ' + categorie);
+
+    	</script>
+
+
+    </body>
+</html>

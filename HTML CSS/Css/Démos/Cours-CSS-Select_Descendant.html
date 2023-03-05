@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Le sélecteur de descendant</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            div p {
+                font-weight:bold;
+            }
+            div#section ul li.informations {
+                color:red;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="section">
+            <p>Le sélecteur de descendant (en gras)</p>
+            <ul>
+                <li>Element noir</li>
+                <li class="informations">Element rouge</li>
+                <li><p>Element gras</p></li>
+            </ul>
+        </div>
+        <p>Un paragraphe normal</p>
+    </body>
+</html>

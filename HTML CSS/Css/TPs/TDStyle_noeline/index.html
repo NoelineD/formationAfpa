@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>122-TP01_Css_Style : les styles CSS</title>
+        <link rel="stylesheet" href="/index.css">
+    </head>
+    <body>
+
+        <h1 class="titres">Grand titre</h1>
+
+        <div id="premierepartie">    
+            <h2 class="titres">Première partie</h2>
+
+            <h3 class="titres">Poème de Baudelaire</h3>
+
+            <blockquote>      
+                <p>Quand le ciel bas et lourd pèse comme un couvercle<br>
+                    Sur l'esprit gémissant en proie aux longs ennuis,<br>
+                    Et que de l'horizon embrassant tout le cercle<br>
+                    II nous verse un jour noir plus triste que les nuits ;</p>
+            </blockquote>
+
+            <blockquote>      
+                <p>Quand la terre est changée en un cachot humide,<br>
+                    Où l'Espérance, comme une chauve-souris,<br>
+                    S'en va battant les murs de son aile timide<br>
+                    Et se cognant la tête à des plafonds pourris ;</p>
+            </blockquote>
+
+            <blockquote>       
+                <p class="entete">Quand la pluie étalant ses immenses traînées<br>
+                    D'une vaste prison imite les barreaux,<br>
+                    Et qu'un peuple muet d'infâmes araignées<br>
+                    Vient tendre ses filets au fond de nos cerveaux,</p>
+            </blockquote>
+
+            <blockquote>      
+                <p>Des cloches tout à coup sautent avec furie<br>
+                    Et lancent vers le ciel un affreux hurlement,<br>
+                    Ainsi que des esprits errants et sans patrie<br>
+                    Qui se mettent à geindre opiniâtrement.</p>
+            </blockquote>
+
+            <blockquote>      
+                <p>Et de longs corbillards, sans tambours ni musique,<br>
+                    Défilent lentement dans mon âme ; l'Espoir,<br>
+                    Vaincu, pleure, et l'Angoisse atroce, despotique,<br>
+                    Sur mon crâne incliné plante son drapeau noir.</p>
+            </blockquote>
+
+            <h3 class="titres">Paragraphe 12</h3>
+
+            <p>Un petit tableau pour s'entraîner...</p>
+
+            <table style="border-collapse: collapse;">
+                <thead>
+                    <tr class="entete">
+                        <th class="produit">Produit</th>
+                        <th class="reference">Référence</th>
+                        <th class="general">Prix unitaire (euros)</th>
+                        <th class="general">Quantité</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="produit">Poudre de Perlimpimpin</td>
+                        <td class="reference">PP579733</td>
+                        <td class="general">1.5</td>
+                        <td class="general">1</td>
+                    </tr>
+                    <tr>
+                        <td class="produit">Poudre d'escampette</td>
+                        <td class="reference">22</td>
+                        <td class="general">22</td>
+                        <td class="general">22</td>
+                    </tr>
+                    <tr>
+                        <td class="produit">Poudre aux yeux</td>
+                        <td class="reference">PY2121</td>
+                        <td class="general">5</td>
+                        <td class="general">2</td>
+                    </tr>
+                </tbody>   
+            </table>
+        </div>
+
+        <div id="deuxiemepartie">     
+            <h2 class="titres">Seconde partie</h2>
+
+            <h3 class="titres">border</h3>
+
+            <div id="greenborder"><p>Une petite citation de Pierre Dac...<br>
+                <cite>Les suppositoires à la nitroglycérine sont beaucoup 
+                    plus efficaces que ceux à la glycérine pure, mais se révèlent 
+                    beaucoup plus bruyants.
+                </cite>
+            </p></div>
+        </div>
+
+        <h3 class="titres">Liste</h3>
+
+        <ol>
+            <li>Premier item</li>
+            <li>Deuxième item
+                <ul type="circle">
+                    <li>Item 2.1</li>
+                    <li>Item 2.2</li>
+                    <li>Item 2.3</li>
+                </ul>
+                <ol type="A">
+                    <li>Avec puce</li>
+                    <li>Cet item aussi avec une puce</li>
+                </ol>
+            </li>
+            <li>Troisième item</li>
+        </ol>
+
+        <hr />     
+        <div id="motfin">    
+             <p>Le mot de la fin :<br>
+                <cite>"Point n'est besoin d'espérer pour entreprendre, ni de réussir 
+                    pour persévérer"
+                </cite>, Guillaume d'Orange.
+            </p>
+        </div>
+    </body>
+</html>

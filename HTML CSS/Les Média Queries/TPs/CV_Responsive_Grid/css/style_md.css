@@ -1,0 +1,56 @@
+/* 
+    fichier css media queries screen min-width 768px
+*/
+main {
+    display: grid;
+    grid-template-columns: 9fr 3fr;
+    grid-template-areas:
+        "entete civil"
+        "form civil"
+        "form col_droite"
+        "exper col_droite";
+}
+
+/* Accroche */
+.accroche {
+    grid-area: entete;
+    padding: 20px;
+    font-size: 2em;
+}
+
+.civil {
+    grid-area: civil;
+    background-color: blue;
+    color:white;
+    padding: 10px;
+}
+
+/* photo identité */
+.civil>img {
+    display: block;
+    width:45%;
+    margin:5px auto;
+    border: 3px solid rgb(241, 64, 64);
+    border-radius: 5px;
+}
+
+.civil h1 {
+    font-size: 2.5em;
+}
+.formation {
+    grid-area: form;
+}
+
+.experience {
+    grid-area: exper;
+}
+
+.civil_divers {
+    grid-area: col_droite;
+}
+
+/* pas de triangles pour civilité et détail */
+div.civil_divers h2>img, section.experience h2>img {
+    display:none;
+}
+

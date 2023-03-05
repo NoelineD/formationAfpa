@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<!--
+Exemple 01 Dom : Affichage des noeud enfants de body plus la valeur du noeud
+                    text de son premier enfant (si existe)
+-->
+<html>
+    <head>
+        <title>Affichage des noeud descendants</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <script>
+            function test() {
+                // b est le noeud body
+                var b = document.body;
+                chaine = "";
+                var enfants = b.childNodes;
+                for (var i = 0; i < enfants.length; i++) {
+                    chaine += "\n" + enfants[i].nodeName;
+                    if (enfants[i].hasChildNodes()) {
+                        if (enfants[i].firstChild.nodeType == 3)    // test si noeud text
+                            chaine += "(" + enfants[i].firstChild.nodeValue + ") ";
+                        else
+                            chaine += " -- ";
+                    }
+                }
+                alert(chaine);
+            }
+        </script>
+    </head>
+    <body>
+        <h3>Affichage des noeuds enfants</h3>
+        <br><br>
+        <p style="text-align:center; font-size:20px; color:blue">Texte</p>
+        <form>
+            <input type="button" value="Tester" onclick="test()" />
+        </form>
+    </body>
+</html>

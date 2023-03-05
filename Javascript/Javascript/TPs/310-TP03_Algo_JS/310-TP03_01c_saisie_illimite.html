@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<!--
+*********************************************************************
+  Nom du programme  :  310-Exo_P2_01c_saisie_illimite.html
+  Auteur            :  Bonneau Didier 
+  Mise a jour       :  septembre 2019
+  Fonction          :  saisie de notes avec arrêt sur la note 999
+*********************************************************************
+-->
+<html>
+    <head>
+        <title>saisie de 10 notes et calcul moyenne</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        
+    	<script>
+    	
+            let note, tabNotes = [], moyenne = 0;
+            let idx;
+            
+            note = parseFloat(prompt('Entrer la première note'));
+
+            //saisie des notes
+            while ( note !== 999) {
+                // attention la fonction prompt renvoie une chaine de caractère
+                // pour le calcul de la moyenne, il npos faut des valeurs numériques
+                // utilisation de la fonction parseInt()
+                tabNotes.push(note);
+                note = parseFloat(prompt('Entrer la note suivante'));
+            }
+            console.log(tabNotes);
+            //traitement
+            //for (idx in tabNotes) {
+            for (idx in tabNotes) {
+                console.log('somme du tableau');
+                moyenne += tabNotes[idx];
+            }
+
+            //moyenne = moyenne / MAX_NOTE;
+            console.log(typeof(moyenne) + ' : ' + moyenne);
+            moyenne /= tabNotes.length;
+            console.log(typeof(moyenne) + ' : ' + moyenne);
+            
+            //affichage du tableau et de la moyenne
+            for (idx in tabNotes) {     // attention la clé idx est de type chaine
+                //alert(typeof(idx));
+                numNote = parseInt(idx) + 1;
+                document.write('<h1>valeur de la note ' + numNote + ' : ' + tabNotes[idx] + '</h1>');
+            }
+            document.write('<h1>La moyenne des notes est : ' + moyenne + '</h1>');
+
+    	</script>
+
+    </body>
+</html>

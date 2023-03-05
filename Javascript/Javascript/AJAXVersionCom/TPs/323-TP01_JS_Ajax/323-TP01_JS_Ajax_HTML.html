@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!--
+323-TP01_JS_Ajax_HTML.html : lecture par ajax d'un fichier HTML avec test de la réponse
+Didier Bonneau DWWM Afpa Créteil
+-->
+<html>
+    <head>
+        <title>323-TP01_JS_Ajax_HTML</title>
+        <link rel="stylesheet" href="323-TP01_JS_Ajax.css" />
+        <script src="323-TP01_JS_Ajax_HTML.js"></script>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+    <h1>TP Ajax</h1>
+    <h3>323-TP01_JS_Ajax_HTML : Requête (a)synchrone avec reponse texte html</h3>
+    <h4>Gestion d'un chargeur</h4>
+    <div id="contenu">
+        <input type="radio" name="choix" id="async" onclick="inverseSync()" checked/><label for="async">envoie d'une requête asynchrone</label>
+        <input type="radio" name="choix" id="sync" onclick="inverseSync()"/><label for="sync">envoie d'une requête synchrone</label>
+        <h2>liste des expositions</h2>
+        <table>
+            <thead>
+            <tr>
+                <th>Nom du club</th>
+                <th>Theme</th>
+                <th>Date</th>
+            </tr>
+            </thead>
+            <tbody id="result"></tbody>
+            <tfoot id="chargeur" style="display: none">
+                <tr>
+                    <td colspan="3"><img src="ajax-loader.gif" alt="chargeur"/></td>
+                </tr>
+             </tfoot>
+        </table>
+    </div>
+    <br/>
+    <button onclick="requete();" >Envoyer la requête</button>
+    </body>
+</html>

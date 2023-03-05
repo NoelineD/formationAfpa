@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!--
+*********************************************************************
+  Nom du programme  :  310-Exo_P2_02_somme_tableau.html
+  Auteur            :  Bonneau Didier 
+  Mise a jour       :  septembre 2019
+  Fonction          :  somme de 2 tableaux
+*********************************************************************
+-->
+<html>
+    <head>
+        <title>somme de 2 tableaux</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        
+    	<script>
+        
+            const tab1 = [4,8,7,9,1,5,4,6];
+            const tab2 = [7,6,5,2,1,3,7,4];
+            let tabRes = [];
+            let idx;
+
+            // traitement
+            for (idx in tab1) {
+
+                tabRes.push(tab1[idx] + tab2[idx]);
+
+            }
+
+    //affichage du tableau
+            for (idx in tabRes) {
+                //document.write('<h1>valeur ' + idx + ' : ' + tabRes[idx] + '</h1>');
+                document.write(`<h1>valeur ${idx} : ${tabRes[idx]} </h1>`);
+            }
+
+        </script>
+
+    </body>
+</html>

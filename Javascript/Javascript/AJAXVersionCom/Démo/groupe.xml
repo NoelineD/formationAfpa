@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<groupe>
+    <personne>
+        <nom>NOM1</nom>
+        <profil>PROFIL1</profil>
+    </personne>
+    <personne>
+        <nom>NOM2</nom>
+        <profil>PROFIL2</profil>
+    </personne>
+    <personne>
+        <nom>NOM3</nom>
+        <profil>PROFIL3</profil>
+    </personne>
+</groupe>

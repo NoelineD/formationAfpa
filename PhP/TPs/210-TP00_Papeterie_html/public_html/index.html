@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<!--
+ * @author Didier Bonneau
+ * @copyright (c) Afpa, DWWM
+ * @version 1.0 du 01/04/2020
+ * Fichier principal de l'application TP_Papeterie
+ -->
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>
+            210_00_TP_Papeterie DWWM
+        </title>
+        <!-- Bootstrap core CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link href="css/papeterie.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <div class='wrap'>
+            <header class="container-fluid bg-dark text-white">
+                <div class="row">
+                    <div class="col-1">
+                        <img src="images/logo_papeterie.png" alt="logo">
+                    </div>
+                    <div class="col-8">
+                        <h3>Papeterie du Centre</h3>
+                        <p>9 rue Marc Seguin<br>
+                            94000 Créteil<br>
+                            Tél : 01 23 45 67 89</p>
+                    </div>
+                    <div class="col-3">
+                        <span>Déjà client : <a href="#" class="btn btn-primary btn-sm">Identifiez-vous</a></span>
+                        <br><br>
+                        <span><a href="#" class="btn btn-secondary btn-sm">Créer un compte</a></span>
+                        <br>
+                        <span class="badge badge-secondary">DATE : 01-03-2013</span>
+                    </div>
+                </div>
+            </header>
+
+            <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+                <a class="navbar-brand active" href="index.html">Accueil</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                    <ul class="navbar-nav">
+                        <!-- Dropdown -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">Les Produits</a>
+                            <div class="dropdown-menu bg-secondary">
+                                <a class="dropdown-item" href="prod_papeterie.html">Papeterie</a>
+                                <a class="dropdown-item" href="prod_ecriture.html">Ecriture</a>
+                                <a class="dropdown-item" href="#">Accessoires</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Les Bonnes affaires</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled" href="#">Votre panier</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <main class="container">
+                    <p class="h2">Bienvenue sur le site de la Papeterie du centre</p>
+            </main>
+        </div>
+        <footer>
+            <div class="bg-dark text-white">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 col-md-8 col-sm-6">
+                            <h6 class="copyright text-white">Copyright &copy;Section DWWM Afpa Créteil 2020 / Tous droits réservés. </h6>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-6">
+                            <div class="foot_menu">
+                                <ul>
+                                    <li class=""> <a href="/contact/" class="" target="_self">Contact</a> </li>
+                                    <li class=""> <a href="/mentions-legales.html" class="" target="_self">Mentions légales</a> </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    </body>
+</html>

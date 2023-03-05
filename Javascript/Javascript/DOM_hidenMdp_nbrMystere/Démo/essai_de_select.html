@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <title>essai</title>
+  <meta charset="utf-8">
+</head>
+
+<body>
+  <select></select>
+
+<script type="text/javascript">
+  let mois = ['Janvier', 'Février', 'Mars'];
+  let sel = document.querySelector('select');
+
+/*
+  for(idx = 0; idx < 3; idx++){
+    let opt = new Option(mois[idx], idx);
+    sel[idx] = opt;
+  }
+*/
+
+/*
+  for(idx in mois){
+    let opt = new Option(mois[idx], idx);
+    sel[idx] = opt;
+  }
+*/
+
+  mois.forEach(function (textDuMois, indiceDuMois){
+    let opt = new Option(textDuMois, indiceDuMois);
+    sel[indiceDuMois] = opt;
+  });
+
+</script>
+
+</body>
+</html>

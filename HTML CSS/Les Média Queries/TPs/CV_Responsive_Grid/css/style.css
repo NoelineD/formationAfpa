@@ -1,0 +1,68 @@
+/* 
+    fichier css général
+*/
+
+*{
+    box-sizing: border-box;
+}
+html,body{
+    width:90%; /* base de test et de mesures */
+    /*margin: .75em 1.14285714285714% ;/* 12px/16px 12px/1050px  */
+    margin: 0 auto;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size : 16px;  /* pour test ==> défini dans chaque media query */
+}
+
+header, section {
+    border: 1px solid black;
+}
+
+/* Accroche */
+.accroche{
+    font-weight: bold;
+    color: blue;
+}
+
+/* titres formation et experience */
+section header {
+    font-size: 2em; /* 32 px */
+    margin: 0.625em  10px; /* 20px/32px */
+    padding : 0.70821529745042% ; /*5px/706px */ 
+    font-weight: bold;
+    color: white;
+    background-color: blue;
+}
+
+section h2 {
+    margin: 0px 10px;
+}
+
+
+section.experience h2 {
+    font-size: 1.2em;
+    background-color: #11b7ee;
+    font-weight: normal;
+}
+
+section.formation p {
+    margin-left: 30px;
+}
+section.formation p:nth-child(2n+3) {
+    margin-left: 80px;
+}
+
+section.formation span {
+    font-weight: bold;
+}
+
+div.civil_divers h2 {
+    background-color: white;
+    color : blue;
+    margin: 5px 5px;
+    padding : 2.13675213675214% ; 
+}
+
+.civil_divers {
+    background-color: blue;
+    color:white;
+}

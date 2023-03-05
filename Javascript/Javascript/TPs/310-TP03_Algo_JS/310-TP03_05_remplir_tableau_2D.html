@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<!--
+*********************************************************************
+  Nom du programme  :  310-Exo_P2_05_remplir_tableau_2D.html
+  Auteur            :  Bonneau Didier 
+  Mise a jour       :  septembre 2019
+  Fonction          :  Remplissage d'un tableau à 2 dimensions
+*********************************************************************
+-->
+<html>
+    <head>
+        <title>Remplissage d'un tableau à 2 dimensions</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        
+    	<script type="text/javascript">
+    	
+            const LIGNE = 6;
+            const COLONNE = 13;
+            let tab = [];
+            let lig, col;
+
+            // traitement
+            for (lig = 0; lig < LIGNE; lig++) {
+
+                tab[lig] = [];
+                for (col = 0; col < COLONNE; col++) {
+
+                    tab[lig][col] = 0;
+
+                }
+
+            }
+
+            //affichage du tableau
+            for (lig in tab) {
+                for (col in tab[lig]) {
+                    document.write('<h1>valeur [' + lig + ' , ' + col + '] : '+ tab[lig][col] + '</h1>');
+                }
+                document.write('<br>');
+            }
+            console.log(tab);
+        </script>
+
+    </body>
+</html>

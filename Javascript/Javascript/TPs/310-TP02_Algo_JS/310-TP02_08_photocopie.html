@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!--
+*********************************************************************
+  Nom du programme  :  310-Exo_P1_08_photocopie.html
+  Auteur            :  Bonneau Didier 
+  Mise a jour       :  septembre 2019
+  Fonction          :  Calcul du prix des photocopies
+*********************************************************************
+-->
+<html>
+    <head>
+        <title>Prix des photocopies</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        
+    	<script>
+    	
+            var nbrCopie, prix;
+            const P_10 = 0.10, P_20 = 0.09, P_30 = 0.08;
+
+            // saisie
+            nbrCopie = prompt('Entrer le nombre de copies : ');
+
+            //traitement
+            if (nbrCopie <= 10) {
+                prix = nbrCopie * P_10;
+            } else {
+                if (nbrCopie <= 30) {
+                    prix = 10 * P_10 + (nbrCopie - 10) * P_20;
+                } else {
+                    prix = 10 * P_10 + 20 * P_20 + (nbrCopie - 30) * P_30;
+                }
+            }
+
+            //affichage
+            alert('le prix total est : ' + prix);
+
+    	</script>
+
+
+    </body>
+</html>

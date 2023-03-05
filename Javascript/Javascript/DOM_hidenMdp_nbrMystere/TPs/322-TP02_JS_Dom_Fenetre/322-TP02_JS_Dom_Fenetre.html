@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<!--
+322-TP02_JS_Dom_Fenetre
+Création et affichage d'une fenêtre fille 
+Didier Bonneau DWWM Afpa Créteil maj 29-07-2020
+-->
+<html>
+    <head>
+        <title>322-TP02_JS_Dom_Fenetre : Gestion de Fenetres</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+            let fenetre = null;
+            let options = "width=200,height=200,toolbar=yes,directories=no,"+
+                            "menubar=no,scrollbars=yes,status=yes";
+                            
+            function ouvreFen() {
+                if (fenetre == null || fenetre.closed){
+                    fenetre = open("322-TP02_JS_Dom_Fenetre_Fille.html", target="_blank", "Fenetre Fille", options);
+                    fenetre.document.title = "Fenetre Fille";
+                    //fenetre.document.write("<h2>Je suis une fille</h2>");
+                } else {
+                    fenetre.focus();
+                }
+            }
+            function reTaille(delta){
+                fenetre.resizeBy(delta, delta);
+            }
+            
+            </script>
+            
+
+    </head>
+    <body>
+        <div>
+            <h2>TP sur la gestion des fenêtres</h2>
+            <br>
+            <input type="button" value="Nouvelle fenêtre" onclick="ouvreFen()"/>
+            <input type="button" value="fermer" onclick="fenetre.close()"/>
+            <!--input type="button" value="Taille +" onclick="fenetre.resizeBy(50, 50)"/>
+            <input type="button" value="Taille -" onclick="fenetre.resizeBy(-50, -50)"/-->
+            <input type="button" value="Taille +" onclick="reTaille(50)"/>
+            <input type="button" value="Taille -" onclick="reTaille(-50)"/><br>
+            <input type="button" value="Montrer" onclick="fenetre.focus()"/>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<!--
+322-TP06_JS_Dom_Date_V01 : saisies par des <input type="text"/>
+utilisation de la classe Date en JS
+Didier Bonneau DWWM Afpa Créteil maj 21-07-2021
+-->
+<html>
+    <head>
+        <title>Calcul de date</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="322-TP06_JS_Dom_Date_V01.js"></script>
+        <style>
+            div {
+                width: 500px;
+                margin: 0 auto;
+            }
+            label{
+                padding: 10px;
+            }
+            input[type="text"] {
+                width:30px;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <h2>Calcul du nombre de jours/mois/année à partir d'une date saisie</h2>
+        <form>
+            <fieldset>
+                <legend> Entrez votre date de naissance</legend>
+                <br />
+                <label for="id_txt_annee">année </label><input type="text" id="id_txt_annee"/>
+                <label for="id_txt_mois">mois </label><input type="text" id="id_txt_mois"/>
+                <label for="id_txt_jour">jour </label><input type="text" id="id_txt_jour"/>
+                <br />
+            </fieldset>
+            <fieldset>
+                <legend> Sélectionnez l'unité</legend>
+                <input type="radio" id="id_opt_jour" name="choix_unit"><label for="id_opt_jour"> jours</label><br><br>
+                <input type="radio" id="id_opt_mois" name="choix_unit"><label for="id_opt_mois"> mois</label><br><br>
+                <input type="radio" id="id_opt_annee" name="choix_unit"><label for="id_opt_annee"> années</label><br>
+            </fieldset>
+            <input type="button" id="id_btn_calcul" value="Calculer" />
+        </form>
+        </div>
+    </body>
+</html>

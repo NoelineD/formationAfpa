@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<!--
+121-TP05_Html_ImgCliquable
+Utilisation d'une MAP
+Didier Bonneau DWWM Afpa Créteil maj 07-03-2022
+-->
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>121-TP04_Html_ImgCliquable : Les images réactives</title>
+    </head>
+    <body>
+        <h1 align="center">Création d'une image réactive</h1>
+        <hr width="75%"> 
+        <br>
+        <img src="le_web.png" alt="image du web" usemap="#le_web">
+        <map name="le_web" id="le_web">
+            <area shape="rect" coords="780,80,950,150" href="121-TP05_Html_PageHtml.html" alt="le html5">
+            <area shape="rect" coords="780,550,970,630" href="121-TP05_Html_PageCss.html" alt="la feuille de style">
+            <area shape="poly" coords="135,660,280,560,370,635,210,725,135,660" href="121-TP05_Html_PageJs.html" alt="le javascript">
+            <area shape="circle" coords="450,125,49" href="121-TP05_Html_PagePhp.html" alt="le php">
+        </map>
+    </body>
+</html>

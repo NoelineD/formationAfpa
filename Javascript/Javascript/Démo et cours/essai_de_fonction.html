@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <title>essai</title>
+  <meta charset="utf-8">
+
+</head>
+
+<body>
+  <script>
+
+    let tableau = [];
+
+    saisieNotes(tableau);
+
+    console.log(tableau);
+
+    let moy = calculMoyenne(tableau);
+
+    afficheMoyenne(moy);
+
+    console.log(moy);
+
+
+    function saisieNotes(tab) {
+
+      let note = 0;
+
+      while(note != 99) {
+
+        note = parseFloat(prompt('Entrer une note'));
+        if(note >= 0 && note<=20){
+          tab.push(note);
+        }
+
+      }
+
+    }
+
+    function calculMoyenne(tab) {
+
+      let moyenne = 0;
+
+      for(let idx in tab) {
+        moyenne += tab[idx];
+      }
+      moyenne /= tab.length;
+      //console.log(idx); // erreur variable undefined
+      return moyenne;
+    }
+
+    function afficheMoyenne(moyenne){
+      alert('La moyenne est : ' + moyenne);
+
+      //moyenne = 0;
+   }
+
+
+  </script>
+</body>
+
+</html>

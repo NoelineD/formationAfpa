@@ -1,0 +1,91 @@
+h1 {
+    text-align:center;
+    color:rgb(66, 179, 94);
+    }
+    
+    body{
+        font-family:verdana,arial,sans-serif;
+        background-color: #F3EAEA;
+    }
+    
+    .produit{
+    background-color: bisque;
+    }
+    
+    .reference{
+    background-color:gray;
+    }
+    
+    .general{
+    background-color:aqua;
+    }
+    
+    #premierepartie{
+        background-image: url("/logoafpa.jpg");
+        background-repeat: repeat-y;
+        background-position:right;
+    }
+    #motfin{
+        color:rgb(61, 140, 231);
+        font-size:small;
+        background-color: #C0C0C0;
+    }
+    
+    div>h3{
+        color:red;
+    }
+    
+    div>blockquote::first-letter{
+    color:green;
+    font-weight:bold;
+    font-size:x-large;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    
+    table *{
+        border:solid 1px black;
+    }
+
+    table tr td:nth-child(1)::first-letter{
+    text-transform:capitalize;
+    }
+    
+    table tr td:nth-child(2){
+    background-color: red;
+    width:10em;
+    text-align: center;
+    }
+    
+    table tr td:nth-child(3){
+     width:30%;
+     text-align:right;
+        }
+    
+    table tr td:nth-child(4){
+        text-align: center;
+               }
+    
+    
+    /* table tr td:nth-child(4){
+    
+               } */
+    
+    .titres{
+        font-family: arial, sans-serif;
+    }
+    
+    blockquote{
+        text-indent:1em;
+    }
+    
+    .entete{
+      text-decoration:underline;
+      text-transform:lowercase;
+    }
+
+    #greenborder {
+        border: solid greenyellow;
+        border-width:thick;
+        padding:1em;
+    }
+    

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!--
+*********************************************************************
+  Nom du programme  :  310-Exo_P1_01_permut.html
+  Auteur            :  Bonneau Didier 
+  Mise a jour       :  septembre 2019
+  Fonction          :  Permutation de deux valeurs entieres
+*********************************************************************
+-->
+<html>
+    <head>
+        <title>Permutation de deux valeurs entieres</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        
+    	<script>
+    	
+    		var x;
+    		var y;
+    		var sauv;
+
+    		//saisie
+    		x = prompt('Entre la valeur de x');
+    		y = prompt('Entre la valeur de y');
+
+    		// traitement
+    		sauv = x;
+                x = y;
+                y = sauv;
+
+                //affichage
+                alert(`la valeur de x est : ${x}`);
+                alert('la valeur de y est : ' + y);
+
+    	</script>
+
+
+    </body>
+</html>

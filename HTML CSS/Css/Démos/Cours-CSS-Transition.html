@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <title>transition</title>
+        <meta charset="utf-8">
+        <style>
+            .transition a { padding: 2px;
+                            text-decoration:none;
+                            font-family: verdana;
+                            font-size: 0.8em;
+                            color: black;
+                            border-bottom:1px solid orange;
+                            -webkit-transition: border 500ms ease-out ;
+                            -moz-transition: border 500ms ease-out;
+                            -o-transition: all 500ms ease-out;
+                            transition: border 500ms ease-out;}
+            .transition a:hover{ border-bottom: 10px solid #f90;}
+        </style>
+    </head>
+    <body>
+        <nav class="transition">
+            &nbsp;&nbsp;
+            <a href="#">Image 1</a>&nbsp;&nbsp;
+            <a href="#">Image 2</a>&nbsp;&nbsp;
+            <a href="#">Image 3</a>&nbsp;&nbsp;
+            <a href="#">Image 4</a>&nbsp;&nbsp;
+        </nav>
+    </body>
+</html>

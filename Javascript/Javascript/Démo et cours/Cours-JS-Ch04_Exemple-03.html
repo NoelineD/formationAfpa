@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!--
+Exemple 03 chapitre 4 : l'instruction while
+-->
+<html>
+    <head>
+        <title>Cours-JS-Ch4_Exemple-03 : while</title>
+        <meta charset="UTF-8">
+        <script>
+            function hasard(N) {
+                // renvoie une valeur entière au hasard entre 1 et N inclus
+                return Math.floor(Math.random()*N)+1;
+            }
+        </script>
+    </head>
+    <body>
+        <script>
+            document.write("Affichage de 10 nombres au hasard<br>");
+            max = prompt("Nombres au hasard de 1 à ", "100");
+
+            var i  = 20;
+            while (i < 10) {
+                nombre = hasard(max);
+                document.write("Nombre " + (i + 1) + "  = " + nombre + "<br>");
+                i++ ;
+            }
+/*            do {
+                nombre = hasard(max);
+                document.write("Nombre " + (i + 1) + "  = " + nombre + "<br>");
+                i++ ;
+            } while(i < 10)*/
+
+        </script>
+    </body>
+</html>

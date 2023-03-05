@@ -1,0 +1,141 @@
+/*
+125-TP02_Responsive_PictureBox.css
+Feuille de style du TP 125-TP02_Responsive_PictureBox.html
+Didier Bonneau DWWM Afpa Créteil maj 31-08-2020
+*/
+
+/* normalisation */
+* {
+    box-sizing: border-box;
+    margin: 0; /* toutes les marges seront définies dans les éléments */
+    padding: 0;
+}
+
+/* défauts */
+    html,
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size : 14px;
+        /*height: 100%;*/
+        background: #eee;
+        width: 95%;
+        margin: .5em auto; /* 8/16 haut et bas + centrage horizontal */
+    }
+
+    /* titre général */
+    .titre {
+        margin: .5em auto;
+    }
+    .titre span{
+        border : dotted 2px black ;
+    }
+
+    /* le catalogue */
+    .catalogue {
+        margin : .3125em auto; /* 5/16 */
+        padding: .3125em; /* 5/16 */
+        text-align: center; /* centrer les li dans la ul */
+        list-style-type: none;
+        margin-bottom: .9375em; /* 15/16 */
+        border: .0625em solid white; /* 1/16 */
+        background: white;
+        box-shadow: 0 0 .625em black; /* 10/16 */
+
+
+    }
+    .catalogue li {
+        display: inline-block;
+        font-weight: .9em;
+        line-height: 2em;
+        width: 32%; /* 3 du font - par défaut */
+        margin: .1875em ; /* 3/16 */
+        background: #eee;
+        box-shadow: 0 0 .3125em black; /* 5/16 */
+    }
+    /* icone de main au survol de la souris */
+    .catalogue li:hover {
+        cursor: pointer;
+    }
+    /* catalogue actif */
+    .active {
+        font-style : italic;
+        border: dotted 2px black;
+    }
+
+    .grande-image {
+        max-width: 100%;
+    }
+
+    .center {
+        text-align: center;
+    }
+
+.galerie {
+    background-color: skyblue;
+    margin: .5em 0px;
+    padding: .5em;
+}
+
+
+/* smartphone */
+@media screen and (max-width: 767px) {
+
+    /* le catalogue */
+    .catalogue {
+/*        display: flex;
+        flex-wrap: nowrap;*/
+        overflow-x: scroll;
+        white-space: nowrap;
+    }
+
+    /* La gallerie */
+    .galerie {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: scroll; /* défilement horizontal */
+        margin-bottom: 0.9375em; /* idem header */
+    }
+    .galerie a {
+        margin: 2%; /* marge identique tout autour... */
+    }
+    .galerie a img {
+        width: auto;
+        margin: 0;
+        padding: 2%; /* du <a> contenant l'image */
+        background: white;
+    }
+
+}
+
+/* tablettes */
+@media screen and (min-width: 767px) and (max-width: 991px) {
+    main { /* privilégier la grande image */
+        float: right;
+        width: 70%;
+        height : 45em; /* 720 px */
+    }
+    .galerie {
+        float: left;
+        overflow-y: auto; /* ascenseur vertical au besoin */
+        width: 30%;
+        height: 45em; /* 720 px */
+    }
+
+}
+
+/* pc moyen et grand */
+@media screen and (min-width: 993px) {
+    main { /* privilégier la grande image */
+        float: right;
+        width: 60%;
+        height : 45em; /* 720 px */
+    }
+    .galerie {
+        float: left;
+        overflow-y: auto; /* ascenseur vertical au besoin */
+        width: 37%;
+        height: 45em; /* 720 px */
+    }
+
+
+}

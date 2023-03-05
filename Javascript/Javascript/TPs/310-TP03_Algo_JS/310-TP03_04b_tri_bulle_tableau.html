@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!--
+*********************************************************************
+  Nom du programme  :  310-Exo_P2_04b_tri_bulle_tableau.html
+  Auteur            :  Bonneau Didier 
+  Mise a jour       :  septembre 2019
+  Fonction          :  Tri d'un tableau par tri à bulle
+*********************************************************************
+-->
+<html>
+    <head>
+        <title>Tri d'un tableau par tri à bulle</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        
+    	<script>
+    	
+            var tab = [15,2,33,4,55,16,7,18,9];
+            var idx, sauv;
+            var permut = true;
+
+            // traitement
+            idx2 = 2;
+            while (permut) {
+
+                permut = false;
+
+                for (idx = 0; idx <= tab.length - idx2; idx++) {
+
+                    if (tab[idx] < tab[idx + 1]) {
+
+                        sauv = tab[idx];
+                        tab[idx] = tab[idx + 1];
+                        tab[idx + 1] = sauv;
+
+                        permut = true;
+                    }
+
+                }
+                idx2++;
+            }
+            //affichage du tableau
+            for (idx in tab) {
+                document.write('<h1>valeur ' + idx + ' : ' + tab[idx] + '</h1>');
+            }
+
+        </script>
+
+    </body>
+</html>

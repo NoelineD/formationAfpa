@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<!--
+*********************************************************************
+  Nom du programme  :  310-Exo_P2_08_crypto_vigenere.html
+  Auteur            :  Bonneau Didier 
+  Mise a jour       :  septembre 2019
+  Fonction          :  Cryptographie de Vigénère
+*********************************************************************
+-->
+<html>
+    <head>
+        <title>Cryptographie Vigénère</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        
+    	<script type="text/javascript">
+    	
+            let phrase, phraseCryptee = '', cle, lettre, lettreCle;
+            const alpha = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+            let i, pos, nouvPos, posCle = 0, posLettreCle, decal;
+
+            cle = prompt('Entrer la clé de cryptage :');
+            phrase = prompt('Entrer la phrase à crypter :');
+            document.write('<h1>phrase non cryptée : ' + phrase + '</h1>');
+
+            for (indiceLettre = 0; indiceLettre < phrase.length; indiceLettre++) {
+
+                if(posCle >= cle.length){
+                    posCle = 0;
+                }
+                lettreCle = cle[posCle];
+                posCle++;
+                // recherche de la lettre transformée en majuscule
+                posLettreCle = alpha.indexOf(lettreCle.toUpperCase()); // si lettre non truvée : indiceLettreCryptee égale à -1
+                lettre = phrase[indiceLettre];
+
+                pos = alpha.indexOf(lettre.toUpperCase());
+                
+                if ( pos !== 26) {
+                    nouvPos = pos + posLettreCle;
+                    if(nouvPos > 26){
+                        nouvPos = 26;
+                    }
+                    lettre = alpha[nouvPos];
+                }
+                
+                phraseCryptee += lettre;
+            }
+
+            document.write('<h1>phrase cryptée : ' + phraseCryptee + '</h1>');
+
+        </script>
+
+    </body>
+</html>

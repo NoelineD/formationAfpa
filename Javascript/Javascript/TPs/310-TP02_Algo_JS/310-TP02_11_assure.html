@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<!--
+*********************************************************************
+  Nom du programme  :  310-Exo_P1_11_assure.html
+  Auteur            :  Bonneau Didier 
+  Mise a jour       :  septembre 2019
+  Fonction          :  Afficher du tarif d'assurance
+*********************************************************************
+-->
+<html>
+    <head>
+        <title>Tarif d'assurance</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        
+        <script>
+
+            // Déclaration des variables 
+            var age, perm, ancien, tarif;
+            var ageSup25, permisSup2, ancienSup1;
+            // Déclaration des constantes
+            const TARIF_BLEU = 0, TARIF_VERT = 1;
+            const TARIF_ORANGE = 2, TARIF_ROUGE = 3;
+            const NON_ASSURE = 4;
+
+            // Saisie des informations
+            age = parseInt(prompt("Entrez l'age : "))
+            perm = parseInt(prompt("Entrez le nombre d'années de permis : "));
+            acc = parseInt(prompt("Entrez le nombre d'accidents : "));
+            ancien = parseInt(prompt("Entrez le nombre d'années d'assurance : "));
+
+            // Traitement du calcul
+            ageSup25 = age >= 25;
+            console.log(ageSup25);
+            permisSup2 = perm >= 2;
+            console.log(permisSup2);
+            ancienSup1 = ancien > 1;
+            console.log(ancienSup1);
+
+
+            if (!ageSup25 && !permisSup2) {
+                if (acc == 0) {
+                        tarif = TARIF_ROUGE;
+                } else {
+                        tarif = NON_ASSURE;
+                }
+            } else {
+                if ((!ageSup25 && permisSup2) || (ageSup25 && !permisSup2)) {
+                    switch (acc) {
+                        case 0:
+                                tarif = TARIF_ORANGE;
+                                break;
+                        case 1:
+                                tarif = TARIF_ROUGE;
+                                break;
+                        default:
+                                tarif = NON_ASSURE;
+                    }
+                } else {
+                    switch (acc) {
+                        case 0:
+                                tarif = TARIF_VERT;
+                                break;
+                        case 1:
+                                tarif = TARIF_ORANGE;
+                                break;
+                        case 2:
+                                tarif = TARIF_ROUGE;
+                                break;
+                        default:
+                                tarif = NON_ASSURE;
+                    }
+                }
+            }
+            if (ancienSup1 && (tarif < NON_ASSURE)) {
+                tarif = tarif - 1;
+            }
+
+            // Affichage du résultat
+            switch (tarif) {
+                case TARIF_BLEU:
+                    alert("tarif bleu");
+                    break;
+                case TARIF_VERT:
+                    alert("tarif vert");
+                    break;
+                case TARIF_ORANGE:
+                    alert("tarif orange");
+                    break;
+                case TARIF_ROUGE:
+                    alert("tarif rouge");
+                break;
+                default:
+                    alert("non assuré")
+            }
+
+    	</script>
+    </body>
+</html>

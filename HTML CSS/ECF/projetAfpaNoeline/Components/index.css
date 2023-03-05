@@ -1,0 +1,144 @@
+html, body, h1 {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    box-sizing:border-box;
+    background: #ffffff;
+    color: #111111;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    border-radius:10px;
+    width:100%;
+    display:flex;
+    justify-content: center;
+}
+
+.textarea{
+   overflow-y: auto;
+   width:100%;
+} 
+
+#renseigne {
+    background: linear-gradient(0.25turn, #68abd5, #f8f8f8, #797dc9);
+    border-radius: 5px;
+}
+
+form#renseigne legend{
+    font-size: 16px;
+    padding-bottom: 10px;
+}
+
+form#renseigne fieldset label {
+    display: inline-block;
+    width: 135px;
+}
+
+#checkbox{
+    display:flex;
+    width:100%;
+    /* justify-content: flex-start; */
+}
+
+#interets{
+    width:60%;
+}
+
+#niveau{
+    width:40%;
+}
+
+#interets label, #niveau{
+  
+  margin-top: 2px;
+}
+  
+
+#niveau input{
+    margin-bottom:20px;
+    
+}
+
+/* fieldset>ul{
+justify-content: flex-start;
+   } */
+
+fieldset>ul>li{
+list-style-type: none;
+/* display:flex; */
+
+   }
+
+@media screen and (min-width: 768px) {
+
+    #renseigne{
+        width: 50%;
+        padding: 2em;
+        border-radius:20PX;
+        margin:1em;
+       }
+   
+       textarea{
+           width:80%;
+           height:5em;
+           overflow-y: scroll;
+           border:none;
+       }
+
+    fieldset>ul{
+        width: 100%;
+      }
+    
+    #checkbox{
+        width:100%;
+    }
+
+    fieldset#interets p label{
+        width:175px;
+        background-color: #797dc9;
+        font-size: small;
+    }
+
+    #interets p {
+        background-color: aqua;
+        width:210px;
+        }
+        
+     /* #niveau{
+     }   */
+     
+    } 
+
+
+@media screen and (max-width: 767px) {
+    #renseigne{
+     
+    font-size:0.8em;
+     width: 85%;
+     padding: 1em;
+     margin:1em;
+    }
+
+    fieldset>ul{
+        width:90%;
+      }
+
+    textarea{
+        width:100%;
+        height:5em;
+        overflow-y: scroll;
+        border:none;
+    }
+
+   #interets p {
+   background-color: aqua;
+   width:200px;
+   }
+
+   fieldset#interets p label{
+    background-color: rgb(212, 226, 226);
+    width:170px;
+    }
+
+}
+

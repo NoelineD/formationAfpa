@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<!--
+*********************************************************************
+  Nom du programme  :  310-Exo_P2_08_crypto_cesar.html
+  Auteur            :  Bonneau Didier 
+  Mise a jour       :  septembre 2019
+  Fonction          :  Cryptographie : le chiffre de César
+*********************************************************************
+-->
+<html>
+    <head>
+        <title>Cryptographie César</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        
+    	<script>
+    	
+            let phrase, phraseCryptee = '', lettre;
+            const code = 'ABCDEFGHIJKLMNOPQRSTUVWXYZA';
+            let indiceLettre = 0, indiceLettreCryptee = 0;
+            let decal;
+
+            decal = parseInt(prompt('Entrer le décalage :'));
+            phrase = prompt('Entrer la phrase à crypter :');
+            document.write('<h1>phrase non cryptée : ' + phrase + '</h1>');
+
+            for (indiceLettre = 0; indiceLettre < phrase.length; indiceLettre++) {
+
+                lettre = phrase[indiceLettre];
+
+                // recherche de la lettre transformée en majuscule
+//                while(code[indiceLettreCryptee] != lettre.toUpperCase()){
+//                    indiceLettreCryptee++;
+//                }
+                indiceLettreCryptee = code.indexOf(lettre.toUpperCase()); // si lettre non truvée : indiceLettreCryptee égale à -1
+                
+                if ( indiceLettreCryptee !== 26) {
+                    indiceLettreCryptee = (indiceLettreCryptee + decal) % 26;
+                }
+                
+                phraseCryptee += code[indiceLettreCryptee];
+            }
+
+            document.write('<h1>phrase cryptée : ' + phraseCryptee + '</h1>');
+
+        </script>
+
+    </body>
+</html>

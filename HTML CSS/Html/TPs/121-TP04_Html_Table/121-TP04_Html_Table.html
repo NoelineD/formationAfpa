@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<!--
+121-TP04_Html_Table
+Utilisation d'une table
+Didier Bonneau DWWM Afpa Créteil maj 07-03-2022
+-->
+<html lang="fr">
+    <head>
+        <title>121-TP04_Html_Table : Les tableaux</title>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+    <body>
+        <h1>
+            Création d'un tableau un peu complexe
+        </h1>
+        <hr> 
+        <br>
+        <table style="text-align: center; border: solid black; width: 90%; border-collapse: collapse">
+            <thead>
+                <tr style="border: 1px solid black">
+                    <th>Titre1</th><th>Titre2</th><th>Titre3</th>
+                </tr>				  
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="border: 1px solid black">Cellule simple</td>
+                    <td style="border: 1px solid black">Cellule simple</td>
+                    <td style="border: 1px solid black">Cellule simple</td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="border: 1px solid black">Deux colonnes assemblées</td>
+                    <td style="border: 1px solid black">Cellule simple</td>
+                </tr>
+                <tr>
+                    <td style="border: 1px solid black">Cellule simple</td>
+                    <td style="border: 1px solid black">Cellule simple</td>
+                    <td rowspan="2" style="border: 1px solid black">Deux lignes assemblées</td>			
+                </tr>
+                <tr>
+                    <td style="border: 1px solid black">Cellule simple</td>
+                    <td style="border: 1px solid black">Cellule simple</td>
+                </tr>
+                <tr>
+                    <td style="border: 1px solid black">Cellule simple</td>
+                    <td colspan="2" rowspan="2" style="border: 1px solid black">Deux lignes et deux colonnes</td>
+                </tr>
+                <tr>
+                    <td style="border: 1px solid black">Cellule simple</td>
+                </tr>										
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="3" style="border: 1px solid black"> ceci est le pied du tableau</td>
+                </tr>
+            </tfoot>
+        </table>
+    </body>
+</html>

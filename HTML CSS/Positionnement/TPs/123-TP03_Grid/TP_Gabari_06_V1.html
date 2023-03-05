@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Utilisation de GRID TP03_V1</title>
+    <style>
+        html {
+            font-family: sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        section {
+            display: grid;
+            grid-template-columns: 100px 1fr 200px;
+            grid-template-rows : 70px calc(85vh - 70px) 100px;
+        }
+        .header {
+            grid-column: 1 / 4;
+            background: #ff49ea;
+        }
+        .nav {
+            grid-row: 2 / 4;
+            background-color: gray ;
+        }
+        .article {
+            background-color: rgb(201, 45, 201);
+            padding: 25px;
+        }
+        .aside {
+            background-color: aqua;
+        }
+        .footer {
+            grid-column: 2 / 4;
+            background-color: #ff49ea;
+        }
+    </style>
+</head>
+
+<body>
+
+    <section>
+        <header class="header">
+            <h2>l'Entête</h2>
+        </header>
+
+            <nav class="nav">
+                <h2>la Nav</h2>
+            </nav>
+            <article class="article">
+                <h2>l'Article</h2>
+            </article>
+            <aside class="aside">
+                <h2>le Détail</h2>
+            </aside>
+        <footer class="footer">
+            <h2>le Pied</h2>
+        </footer>
+    </section>
+</body>
+
+</html>

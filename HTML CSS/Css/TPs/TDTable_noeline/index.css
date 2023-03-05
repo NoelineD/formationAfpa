@@ -1,0 +1,46 @@
+table *{
+    border:1px solid black;
+    border-collapse:collapse;
+}
+
+caption{
+border:inherit
+}
+
+caption{
+font-weight:bold;
+text-align:left;
+color:#300;
+}
+
+.greyback{
+    background-color:#999;
+    font-weight: bold;
+    text-align:left;
+    padding-right:0.5;
+    padding-left:0.5;
+    padding-top:0.2;
+    padding-bottom:0.2;
+}
+
+#province,#paris,#gros-paris,#detail-paris,#gros-province,#detail-province{
+    text-align:left;
+    font-weight:bold;
+    background-color:#ddd;
+    padding-right:0.5;
+    padding-left:0.5;
+    padding-top:0.2;
+    padding-bottom:0.2;
+}
+
+.prix{
+    text-align:center;
+    padding-right:0.5;
+    padding-left:0.5;
+    padding-top:0.2;
+    padding-bottom:0.2;
+}
+
+.prix::after{
+    content:'€'
+}

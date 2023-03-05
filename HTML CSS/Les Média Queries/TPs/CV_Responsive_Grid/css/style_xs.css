@@ -1,0 +1,55 @@
+/* 
+    fichier css media queries screen max-width 768px
+*/
+
+body {
+    font-size : 14px;
+}
+/* photo identité à droite */
+.civil>img {
+    position: absolute;
+    right:50px;
+    top:10px;
+    display: block;
+    width:130px;
+    border: 3px solid rgb(235, 69, 69);
+    border-radius: 5px;
+    box-shadow : 0 0 3px blue;
+}
+.civil h1 {
+    font-size: 1.5em;
+    margin: 0.625em  0px; 
+    font-weight: bold;
+    color: white;
+    background-color: blue;
+}
+/* Accroche */
+.accroche{
+    font-size: 1.2em;
+    width: 60%;
+}
+
+section ul {
+    display: none;
+}
+/* affichage à la demande  */
+section.experience h2:hover+ul, section.civil h2:hover+ul, section.divers h2:hover+ul{
+    display: block;
+}
+section.experience h2 img, div.civil_divers img {
+    float: right;
+}
+section.experience h2 span:last-child {
+    display: block;
+    margin: 0px 0px 5px 35px;
+}
+/*  rotation triangle */
+section.experience h2 img:hover, div.civil_divers img:hover {
+    transform: rotate(180deg);
+    transition: transform 0.2s ease-in-out;
+}
+
+div.civil_divers{
+        margin-bottom: 150px;
+}
+ 

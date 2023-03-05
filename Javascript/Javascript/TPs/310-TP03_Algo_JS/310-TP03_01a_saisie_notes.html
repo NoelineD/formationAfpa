@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!--
+*********************************************************************
+  Nom du programme  :  310-Exo_P2_01a_saisie_notes.html
+  Auteur            :  Bonneau Didier 
+  Mise a jour       :  septembre 2019
+  Fonction          :  saisie de 10 notes dans un tableau
+*********************************************************************
+-->
+<html>
+    <head>
+        <title>saisie de 10 notes dans un tableau</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        
+    	<script>
+    	
+            const MAX_NOTE = 5;
+        
+            let notes = [];
+            let idx;
+
+            //saisie des notes
+            for (idx = 0; idx < MAX_NOTE; idx++) {
+                //notes[idx] = prompt('Entrer la note ' + (idx + 1));
+                note = prompt('Entrer la note ' + (idx + 1));
+                notes.push(note);
+                //notes.push(prompt('Entrer la note ' + (idx + 1)));
+            }
+
+            //affichage du tableau
+            for (idx in notes) {     // attention la clé idx est de type chaine
+                //alert(idx);
+                //alert(typeof(idx));
+                numNote = parseInt(idx) + 1;
+                document.write('<h1>valeur de la note ' + numNote + ' : ' + notes[idx] + '</h1>');
+            }
+
+    	</script>
+
+    </body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!--
+Exemple 01 Objet du navigateur : Création d'une fenêtre
+-->
+<html>
+    <head>
+        <title>4_Exemple-01_Fenetre</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type="text/javascript">
+            var fen = null;
+            var options = "width=500,height=200,toolbar=yes,"+
+                    "directories = no, menubar = no, scrollbars = yes, status = yes";
+                    function ouvrirFenetre() {
+                        // création de la nouvelle fenêtre
+                        fen = open("", "fenetre", options,false);
+                        // Ecriture d'un texte dans la nouvelle fenêtre
+                        fen.document.write("<h2>Ceci est ma nouvelle fenêtre</h2>");
+                        //Ecriture d'un texte dans la fenêtre mère
+                        //fen.opener.document.write("<h2>Coucou ma mother</h2>");
+                    }
+        </script>
+
+    </head>
+    <body>
+        <h1>Création d'une nouvelle fenêtre</h1>
+        <form>
+            <h3>Pour créer une fenêtre "enfant", cliquer sur ce bouton :</h3>
+            <input type="button" value="Nouvelle fenêtre" onclick="ouvrirFenetre()"/>
+            <input type="button" value="Fermer" onclick="fen.close()"/>
+        </form>
+    </body>
+</html>

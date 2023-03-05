@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<!--
+*********************************************************************
+  Nom du programme  :  310-Exo_P1_12_multiplication.html
+  Auteur            :  Bonneau Didier 
+  Mise a jour       :  septembre 2019
+  Fonction          :  Affichage d'une table de multiplication
+*********************************************************************
+-->
+<html>
+    <head>
+        <title>Table de multiplication</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        
+    	<script>
+    	
+            var nbr, i;
+
+            //saisie
+            nbr = parseInt(prompt('Entre un nombre'));
+
+            document.write('la table de multiplication de ' + nbr + ' est :<br>')
+            // traitement
+           for( i = 1; i <= 10; i = i+1) {
+                document.write('<h4>',nbr, ' x ', i, ' = ', nbr*i, '</h4>');
+            }
+
+    	</script>
+
+
+    </body>
+</html>

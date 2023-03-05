@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<!--
+TP 124-TP01_Form_Base
+Utilisation desbalises de base d'un formulaire
+Didier Bonneau DWWM Afpa Créteil maj 31-07-2020
+-->
+<html lang="fr">
+    <head>
+        <title>124-TP01_Form_Base : Balises d'un formulaire</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h1 align="center">Exemples de formulaires</h1>
+
+        <p>Reproduire les éléments de formulaire suivants...</p>
+
+        <h2>Balise <code>&lt;input&gt;</code></h2>
+
+        <h3>Champ de saisie avec <code>&lt;input type="text"...&gt;</code></h3>
+
+        <form action="#">
+            <input type="text" name="urlsite" size="40" maxlength="40" placeholder="Entrer un texte" />
+        </form>
+
+        <h3>Cases à cocher</h3>
+
+        <form action="#">
+            <input type="checkbox" name="choix1" id="choix1" value="case1" /><label for="choix1"> case 1.</label><br />
+            <input type="checkbox" name="choix2" id="choix2" value="case2" checked><label for="choix2"> case 2 pr&eacute;-coch&eacute;e.</label><br />
+            <input type="checkbox" name="choix3" id="choix3" value="case3"><label for="choix3"> case 3.</label><br />
+        </form>
+
+        <h3>Boutons radio</h3>
+
+        <form action="#">
+            <input type="radio" name="gout" id="gout1" value="gout1"><label for="gout1"> salé</label> 
+            <input type="radio" name="gout" id="gout2" value="gout2"><label for="gout2"> sucré</label>
+            <input type="radio" name="gout" id="gout3" value="gout3" checked><label for="gout3"> sans saveur</label>
+        </form>
+
+        <h3>Envoyer un fichier...</h3>
+
+        <form action="#" method="post" enctype="multipart/form-data">
+            <input type="file" name="fichier_att">
+        </form>
+
+        <h3>Champ de saisie de mot de passe</h3>
+
+        <form action="#" method="post">
+            <input type="password" name="qui" size="15" maxlength="15" placeholder="mot_de_passe!">
+        </form>
+
+        <h3>Soumettre un formulaire...</h3>
+
+        <form name="DeuxiemeExemple" action="#?subject=essai" method="post">
+            <input type="submit" name="Submit3" value="Envoyer">
+            <button>Soumettre</button>
+        </form>
+
+        <h3>... ou le remettre &agrave; z&eacute;ro&nbsp;!</h3>
+
+        <form name="ExempleDEnvoi" action="#?subject=essai" method="get">
+            <input type="text" name="texte" value="Petit texte...">
+            <input type="reset" value="Mettre &agrave; z&eacute;ro">
+        </form>
+
+        <h2>Champ de saisie long (balise <code>&lt;textarea&gt;</code>)</h2>
+
+        <form action="#">
+            <textarea name="ma_boite" cols="40" rows="2">C'est l'histoire d'un fou qui repeint son plafond. 
+         Un autre fou arrive et lui dit : "Accroche-toi au pinceau, j'enlève l'échelle !" 
+            </textarea>
+        </form>
+
+        <h2>Balise <code>&lt;select&gt;</code></h2>
+
+        <h3>Format par défaut</h3>
+
+        <form action="#">
+            <select name="select">
+                <option value="stne">saint nectaire</option> 
+                <option value="came">camembert</option> 
+                <option value="beau" selected>beaufort</option>
+                <option value="robl">roblochton</option> 
+                <option value="brie">brie</option>
+            </select>
+        </form>
+
+        <h3>On raffine un peu...</h3>
+
+        <form action="#">
+            <select name="select2" size="4" multiple>
+                <option value="stne">saint nectaire</option> 
+                <option value="came" selected>camembert</option> 
+                <option value="beau" selected>beaufort</option>
+                <option value="robl">roblochon</option> 
+                <option value="brie">brie</option>
+            </select>
+        </form>
+
+        <h2>Un exemple combinant plusieurs types de champs</h2>
+
+        <form action="#" method="post" enctype="text/plain"> 
+            <fieldset>
+                <legend>vous identifier :</legend>
+                <label>Votre adresse de courrier électronique...<br /></label>
+                <input type="email" required name="email" size="30" maxlength="40"> 
+                <br /> 
+                <br /> 
+                <label>Tapez ici votre commentaire :<br /></label>
+                <textarea name="Commentaire:" cols="31" rows="4" placeholder="Votre commentaire..."></textarea> 
+            </fieldset>
+            <br /> 
+            <br /> 
+            <input type="submit" value="Envoyer"> 
+            <input type="reset" value="Annuler"> 
+        </form> 
+
+    </body>
+</html>
+

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<!--
+*********************************************************************
+  Nom du programme  :  310-Exo_P1_04_prod_positf_negatif.html
+  Auteur            :  Bonneau Didier 
+  Mise a jour       :  septembre 2019
+  Fonction          :  Dire si le produit de 2 nombres est positif ou négatif (pas de zéro)
+*********************************************************************
+-->
+<html>
+    <head>
+        <title>Dire si le produit de 2 nombres est positif ou négatif</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        
+    	<script>
+    	
+            var nbr1, nbr2;
+            var resultat = 'négatif';
+
+            //saisie
+            nbr1 = prompt('Entre le nombre 1 : ');
+            nbr2 = prompt('Entre le nombre 2 : ');
+
+          // traitement
+//            if ( ((nbr1 > 0) && (nbr2 > 0)) || ((nbr1 < 0) && (nbr2 < 0))) {
+//    		resultat = 'positif';
+//            } else {
+//    		resultat = 'négatif';
+//            }	
+
+            // en passant par des variables booléennes
+            crit1 = ((nbr1 > 0) && (nbr2 > 0));
+            crit2 = ((nbr1 < 0) && (nbr2 < 0));
+
+            if ( crit1 || crit2 ) {
+                resultat = 'positif';
+            } else {
+                resultat = 'négatif';
+            }   
+
+            // affichage
+            alert("Leur produit est " + resultat);
+
+    	</script>
+
+
+    </body>
+</html>

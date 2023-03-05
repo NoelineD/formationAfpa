@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Complex flexbox example</title>
+    <style>
+        html {
+            font-family: sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        section {
+            display: flex;
+        }
+
+        header {
+            background: yellow;
+            height: 64px;
+            margin: 10px;
+        }
+
+        .nav {
+            background: cyan;
+            width: 128px;
+            margin: 0px 10px;
+        }
+
+        .droite {
+            width: 100%;
+        }
+
+
+        .milieu {
+            display: flex;
+            height: 400px;
+        }
+
+        aside {
+            background: cyan;
+            width: 20%;
+            margin: 0px 10px;
+        }
+
+        article {
+            background: rgb(201, 45, 201);
+            width: 80%;
+            padding: 25px;
+        }
+
+        footer {
+            background: yellow;
+            height: 64px;
+            margin: 10px 10px 0px 0px;
+        }
+
+
+    </style>
+</head>
+
+<body>
+
+    <div id="conteneur">
+        <header class="bandeau_h">
+            <h2>l'Entête</h2>
+        </header>
+        <section>
+            <nav class="nav">
+                <h2>la Nav</h2>
+            </nav>
+            <div class="droite">
+                <div class="milieu">
+                    <article>
+                        <h2>l'Article</h2>
+                    </article>
+                    <aside>
+                        <h2>le Détail</h2>
+                    </aside>
+                </div>
+                <footer class="bandeau_h">
+                    <h2>le Pied</h2>
+                </footer>
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,157 @@
+html, body, h1 {
+    margin: 0;
+    padding: 0;
+}
+
+.containerform {
+    box-sizing:border-box;
+    background: #ffffff;
+    color: #111111;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    border-radius:10px;
+    width:100%;
+    display:flex;
+    justify-content: center;
+}
+
+/* Bouton Home Page*/
+#home{
+    width:200px;
+}
+
+#home a{
+    text-decoration: none;
+    background-color:#A0D9DE;
+    color:#151518;
+    border: 2px solid #f2f3f2; 
+    width:20px;
+    margin:1em;
+    padding:10px;
+    padding-top:5px;
+    border-radius: 15px;
+    font-size: 1.2em;
+}
+
+#home a:hover{
+  color: #ffffff;
+}
+
+#renseigne {
+    background: linear-gradient(0.25turn, #68abd5, #f8f8f8, #A0D9DE);
+    border-radius:20px;
+}
+
+form#renseigne legend{
+    font-size: 16px;
+    padding-bottom: 10px;
+}
+
+form#renseigne fieldset label {
+    display: inline-block;
+    width: 135px;
+}
+
+#checkbox{
+    display:flex;
+    width:100%;
+    /* justify-content: flex-start; */
+}
+
+#interets{
+    width:60%;
+}
+
+#niveau{
+    width:40%;
+
+}
+
+
+#interets label, #niveau{
+  
+  margin-top: 2px;
+}
+  
+
+#niveau input{
+    margin-bottom:20px;
+    
+}
+
+/* fieldset>ul{
+justify-content: flex-start;
+   } */
+
+fieldset>ul>li{
+list-style-type: none;
+   }
+
+.textarea{
+overflow-y: auto;
+width:100%;
+ } 
+
+@media screen and (min-width: 768px) {
+
+    #renseigne{
+        width: 450px;
+        padding: 2em;
+        margin:1em;
+       }
+   
+
+    fieldset>ul{
+        width: 100%;
+      }
+    
+    #checkbox{
+        width:100%;
+    }
+
+    fieldset#interets p label{
+        width:175px;
+        font-size: small;
+    }
+
+    #interets p {
+        width:210px;
+        }
+        
+    textarea{
+        width:100%;
+        height:5em;
+        overflow-y: scroll;
+        border:none;
+        }
+    } 
+
+
+@media screen and (max-width: 767px) {
+    #renseigne{
+     
+    font-size:0.8em;
+    width: 450px;
+    padding: 1em;
+    margin:1em;
+    }
+
+    fieldset>ul{
+    width:90%;
+      }
+
+   #interets p {
+   width:200px;
+   }
+
+   fieldset#interets p label{
+    width:170px;
+    }
+    
+    textarea{
+        width:100%;
+        height:5em;
+        overflow-y: scroll;
+        border:none;
+        }
+}
+

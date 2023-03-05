@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<!--
+*********************************************************************
+  Nom du programme  :  310-Exo_P1_15_monnaie.html
+  Auteur            :  Bonneau Didier 
+  Mise a jour       :  septembre 2019
+  Fonction          :  Rendu de la monnaie
+*********************************************************************
+-->
+<html>
+    <head>
+        <title>Rendu de la monnaie</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        
+    	<script>
+    	
+            var achat = 1, sommeDue = 0, paiement = 0;
+            var rendu = 0, nbr10E = 0, nbr5E = 0;
+
+//            while(achat != 0){
+//                //saisie
+//               achat = parseInt(prompt('Entre le motant de l\'achat : '));
+//               sommeDue += achat;
+//            }
+            do {
+                //saisie
+               achat = parseInt(prompt('Entre le motant de l\'achat : '));
+               sommeDue += achat;
+            } while(achat != 0)
+            
+//            while(paiement < sommeDue){
+//                document.write('<br>vous devez : ' + sommeDue + ' Euros');
+//                paiement = parseInt(prompt('Votre versement : '));
+//                if (paiement < sommeDue) {
+//                    document.write('<br>vous ne donnez pas assez !');
+//                }
+//           }
+            do {
+                document.write('<br>vous devez : ' + sommeDue + ' Euros');
+                paiement = parseInt(prompt('Votre versement : '));
+                if (paiement < sommeDue) {
+                    document.write('<br>vous ne donnez pas assez !');
+                }
+           } while(paiement < sommeDue)
+           
+           rendu = paiement - sommeDue;
+           
+           while(rendu >= 10){
+               nbr10E++;
+               rendu -= 10;
+           }
+           if(rendu >= 5){
+               nbr5E = 1;
+               rendu -= 5;
+           }
+           // affichage
+           document.write('Rendu de la monnaie : <br>');
+           document.write('Billets de 10 euros : ', nbr10E ,'<br>');
+           document.write('Billets de 5 euros : ', nbr5E ,'<br>');
+           document.write('Pièces de 1 euros : ', rendu ,'<br>'); 
+    	</script>
+
+
+    </body>
+</html>

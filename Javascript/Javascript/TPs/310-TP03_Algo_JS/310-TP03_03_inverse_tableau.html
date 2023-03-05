@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!--
+*********************************************************************
+  Nom du programme  :  310-Exo_P2_03_inverse_tableau.html
+  Auteur            :  Bonneau Didier 
+  Mise a jour       :  septembre 2019
+  Fonction          :  Inversion des éléments d'un tableau
+*********************************************************************
+-->
+<html>
+    <head>
+        <title>Inversion d'un tableau</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        
+    	<script type="text/javascript">
+    	
+            const tab = [4,8,7,9,1,5,4,6];
+            let tabRes = [];
+            let idx;
+
+            // traitement
+
+            //for (idx = 0; idx < tab.length; idx++) {
+            for (idx in tab) {
+
+                //tabRes[tab.length - idx -1] = tab[idx];
+                tabRes.unshift(tab[idx]);
+            }
+
+
+            //affichage du tableau
+            for (idx in tabRes) {
+                //document.write('<h1>valeur ' + idx + ' : ' + tabRes[idx] + '</h1>');
+                document.write(`<h1>valeur ${idx} : ${tabRes[idx]} </h1>`);
+            }
+
+        </script>
+
+    </body>
+</html>

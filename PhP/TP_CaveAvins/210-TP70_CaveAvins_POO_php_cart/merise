@@ -1,0 +1,56 @@
+#------------------------------------------------------------
+#        Script MySQL.
+#------------------------------------------------------------
+
+
+#------------------------------------------------------------
+# Table: vin
+#------------------------------------------------------------
+
+CREATE TABLE vin(
+        id_vin Int  Auto_increment  NOT NULL ,
+        name   Varchar (50) NOT NULL
+	,CONSTRAINT vin_PK PRIMARY KEY (id_vin)
+)ENGINE=InnoDB;
+
+
+#------------------------------------------------------------
+# Table: user
+#------------------------------------------------------------
+
+CREATE TABLE user(
+        id_user Int  Auto_increment  NOT NULL ,
+        login   Varchar (50) NOT NULL
+	,CONSTRAINT user_PK PRIMARY KEY (id_user)
+)ENGINE=InnoDB;
+
+
+#------------------------------------------------------------
+# Table: panier
+#------------------------------------------------------------
+
+CREATE TABLE panier(
+        id_panier Int  Auto_increment  NOT NULL ,
+        expire_at Date NOT NULL ,
+        id_user   Int NOT NULL
+	,CONSTRAINT panier_PK PRIMARY KEY (id_panier)
+
+	,CONSTRAINT panier_user_FK FOREIGN KEY (id_user) REFERENCES user(id_user)
+	,CONSTRAINT panier_user_AK UNIQUE (id_user)
+)ENGINE=InnoDB;
+
+
+#------------------------------------------------------------
+# Table: item_panier
+#------------------------------------------------------------
+
+CREATE TABLE item_panier(
+        id_vin    Int NOT NULL ,
+        id_panier Int NOT NULL ,
+        quantite  Int NOT NULL
+	,CONSTRAINT item_panier_PK PRIMARY KEY (id_vin,id_panier)
+
+	,CONSTRAINT item_panier_vin_FK FOREIGN KEY (id_vin) REFERENCES vin(id_vin)
+	,CONSTRAINT item_panier_panier0_FK FOREIGN KEY (id_panier) REFERENCES panier(id_panier)
+)ENGINE=InnoDB;
+
